@@ -4,25 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0F172A">
-  <meta name="description" content="InTrack — Internship Tracker">
-  <meta name="application-name" content="InTrack">
+  <meta name="description" content="iTrack Internship Tracker">
+  <meta name="application-name" content="iTrack">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="InTrack">
+  <meta name="apple-mobile-web-app-title" content="iTrack">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <title>InTrack</title>
+  <title>iTrack</title>
 
   <link rel="icon" type="image/png" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
-  <link rel="shortcut icon" type="image/png" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
   <link rel="apple-touch-icon" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
+  <link rel="shortcut icon" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
     :root {
       --navy:#0F172A;
-      --navy2:#111827;
       --blue:#2563EB;
       --green:#16A34A;
       --amber:#F59E0B;
@@ -177,10 +176,6 @@
 
     .btn.red {
       background:var(--red);
-    }
-
-    .btn.orange {
-      background:var(--orange);
     }
 
     .btn.small {
@@ -1296,14 +1291,14 @@
 </head>
 
 <body>
-  <iframe id="bridgeFrame" title="InTrack Bridge"></iframe>
+  <iframe id="bridgeFrame" title="iTrack Bridge"></iframe>
 
   <section id="splash" class="splash">
     <div class="splash-card">
       <div class="splash-logo">
-        <img id="splashLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="InTrack Logo">
+        <img id="splashLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="iTrack Logo">
       </div>
-      <h1>INTRACK</h1>
+      <h1>iTRACK</h1>
       <p>Memuat aplikasi...</p>
     </div>
   </section>
@@ -1330,9 +1325,9 @@
     <div class="auth-shell">
       <aside class="hero">
         <div class="hero-brand">
-          <img id="heroLogo" class="logo-img" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="InTrack Logo">
+          <img id="heroLogo" class="logo-img" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="iTrack Logo">
           <div>
-            <strong>InTrack</strong>
+            <strong>iTrack</strong>
             <span>Internship Tracker</span>
           </div>
         </div>
@@ -1360,12 +1355,12 @@
 
       <main class="auth-card">
         <div class="mobile-auth-brand">
-          <img id="mobileLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="InTrack Logo">
-          <strong>InTrack</strong>
+          <img id="mobileLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="iTrack Logo">
+          <strong>iTrack</strong>
           <span>Internship Tracker</span>
         </div>
 
-        <div class="auth-label">● Enterprise Web App</div>
+        <div class="auth-label">● Aplikasi Web Magang</div>
         <h2 id="authTitle">Masuk Sistem</h2>
         <p id="authSubtitle">Gunakan akun yang sudah terdaftar pada sistem.</p>
 
@@ -1450,25 +1445,26 @@
         </div>
       </main>
     </div>
-  </section>
-
-  <main id="app" class="app hidden">
-    <aside class="sidebar">
-      <div class="app-brand">
-        <img id="sidebarLogo" class="logo-img" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="InTrack Logo">
-        <div>
-          <strong>InTrack</strong>
-          <span>Real Data</span>
-        </div>
+  </btn outline block" type="button" data-action
       </div>
+    </aside>
 
-      <nav id="sideNav" class="nav"></nav>
+    <section class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="pageTitle">Dashboard</h2>
+          <p id="pageSubtitle">Ringkasan data iTrack</p>
+        </div>
+        <div class="top-actions">
+          guidePanduan</button>
+          refreshRefresh</button>
+          install-appInstall</button>
+          fullscreenFullscreen</button>
+          <button class="avatar" id="avatarBtn" type="button">IT</button>
+        </div>
+      </header>
 
-      <div class="sidebar-footer">
-        <div class="user-box">
-          <strong id="sideName">User</strong>
-          <span id="sideRole">Role</span>
-ction id="content" class="content"></section>
+      <section id="content" class="content"></section>
     </section>
 
     <nav id="bottomNav" class="bottom-nav"></nav>
@@ -1483,8 +1479,8 @@ ction id="content" class="content"></section>
     const LOGO_URL = 'https://ik.imagekit.io/logojkdiy/InTrack%20(1).png';
     const BRIDGE_URL = APPS_SCRIPT_WEB_APP_URL.indexOf('?') >= 0 ? APPS_SCRIPT_WEB_APP_URL + '&page=bridge' : APPS_SCRIPT_WEB_APP_URL + '?page=bridge';
 
-    const SESSION_KEY = 'INTRACK_SESSION_TOKEN';
-    const USER_KEY = 'INTRACK_SESSION_USER';
+    const SESSION_KEY = 'ITRACK_SESSION_TOKEN';
+    const USER_KEY = 'ITRACK_SESSION_USER';
 
     const MENU = [
       { id:'dashboard', label:'Dashboard', icon:'▦', roles:['SUPER ADMIN','ADMIN','MENTOR','INTERN'] },
@@ -1503,8 +1499,8 @@ ction id="content" class="content"></section>
 
     let state = {
       config:{
-        appName:'InTrack',
-        appFullName:'InTrack — Internship Tracker',
+        appName:'iTrack',
+        appFullName:'iTrack — Internship Tracker',
         logoUrl:LOGO_URL
       },
       sessionToken:'',
@@ -1520,36 +1516,36 @@ ction id="content" class="content"></section>
       pendingModalAction:null
     };
 
-    const InTrackApi = {
+    const iTrackApi = {
       iframe:null,
       ready:false,
       callbacks:{},
 
       init:function(){
         return new Promise(function(resolve,reject){
-          if(InTrackApi.ready && InTrackApi.iframe){
+          if(iTrackApi.ready && iTrackApi.iframe){
             resolve();
             return;
           }
 
           const iframe = document.getElementById('bridgeFrame');
           iframe.src = BRIDGE_URL;
-          InTrackApi.iframe = iframe;
+          iTrackApi.iframe = iframe;
 
           const timeout = setTimeout(function(){
             reject({
               success:false,
-              message:'Bridge Apps Script timeout. Pastikan Web App dan Bridge.html sudah aktif.'
+              message:'Bridge timeout. Pastikan file Bridge.html sudah dibuat dan deploy Web App sudah diperbarui.'
             });
           },25000);
 
           function readyListener(event){
             const data = event.data || {};
 
-            if(data.source === 'INTRACK_APPS_SCRIPT_BRIDGE_READY'){
+            if(data.source === 'ITRACK_BRIDGE_READY'){
               clearTimeout(timeout);
               window.removeEventListener('message', readyListener);
-              InTrackApi.ready = true;
+              iTrackApi.ready = true;
               resolve();
             }
           }
@@ -1562,13 +1558,17 @@ ction id="content" class="content"></section>
         window.addEventListener('message',function(event){
           const data = event.data || {};
 
-          if(data.source !== 'INTRACK_APPS_SCRIPT_BRIDGE') return;
+          if(data.source !== 'ITRACK_BRIDGE_RESPONSE'){
+            return;
+          }
 
-          const callback = InTrackApi.callbacks[data.requestId];
+          const callback = iTrackApi.callbacks[data.requestId];
 
-          if(!callback) return;
+          if(!callback){
+            return;
+          }
 
-          delete InTrackApi.callbacks[data.requestId];
+          delete iTrackApi.callbacks[data.requestId];
 
           if(!data.success){
             callback.reject(data.response || {
@@ -1583,26 +1583,26 @@ ction id="content" class="content"></section>
       },
 
       call:async function(action,payload){
-        await InTrackApi.init();
+        await iTrackApi.init();
 
         return new Promise(function(resolve,reject){
           const requestId = 'REQ-' + Date.now() + '-' + Math.random().toString(16).slice(2);
 
-          InTrackApi.callbacks[requestId] = {
+          iTrackApi.callbacks[requestId] = {
             resolve:resolve,
             reject:reject
           };
 
-          InTrackApi.iframe.contentWindow.postMessage({
-            source:'INTRACK_GITHUB_FRONTEND',
+          iTrackApi.iframe.contentWindow.postMessage({
+            source:'ITRACK_FRONTEND',
             requestId:requestId,
             action:action,
             payload:payload || {}
           }, '*');
 
           setTimeout(function(){
-            if(InTrackApi.callbacks[requestId]){
-              delete InTrackApi.callbacks[requestId];
+            if(iTrackApi.callbacks[requestId]){
+              delete iTrackApi.callbacks[requestId];
               reject({
                 success:false,
                 message:'Request timeout.'
@@ -1613,7 +1613,7 @@ ction id="content" class="content"></section>
       }
     };
 
-    InTrackApi.listen();
+    iTrackApi.listen();
 
     window.addEventListener('beforeinstallprompt', function(event){
       event.preventDefault();
@@ -1637,11 +1637,13 @@ ction id="content" class="content"></section>
     setupPwaManifest();
 
     function setupPwaManifest(){
+      const scopePath = location.pathname.replace(/\/[^\/]*$/, '/') || '/';
+
       const manifest = {
-        name:'InTrack — Internship Tracker',
-        short_name:'InTrack',
+        name:'iTrack — Internship Tracker',
+        short_name:'iTrack',
         start_url:location.href,
-        scope:location.pathname.replace(/\/[^\/]*$/,'/') || './',
+        scope:scopePath,
         display:'standalone',
         orientation:'portrait',
         background_color:'#FFFFFF',
@@ -1652,7 +1654,10 @@ ction id="content" class="content"></section>
         ]
       };
 
-      const blob = new Blob([JSON.stringify(manifest)], { type:'application/json' });
+      const blob = new Blob([JSON.stringify(manifest)], {
+        type:'application/json'
+      });
+
       const url = URL.createObjectURL(blob);
       const link = document.createElement('link');
 
@@ -1677,9 +1682,9 @@ ction id="content" class="content"></section>
       callApi('APP_CONFIG', {}, function(config){
         state.config = config || state.config;
 
-        if(!state.config.logoUrl){
-          state.config.logoUrl = LOGO_URL;
-        }
+        state.config.appName = 'iTrack';
+        state.config.appFullName = 'iTrack — Internship Tracker';
+        state.config.logoUrl = LOGO_URL;
 
         applyConfig();
 
@@ -1707,17 +1712,17 @@ ction id="content" class="content"></section>
     }
 
     function applyConfig(){
-      const logo = state.config.logoUrl || LOGO_URL;
       const ids = ['splashLogo','heroLogo','mobileLogo','sidebarLogo'];
 
       ids.forEach(function(id){
         const img = document.getElementById(id);
+
         if(img){
-          img.src = logo;
+          img.src = LOGO_URL;
         }
       });
 
-      document.title = state.config.appName || 'InTrack';
+      document.title = 'iTrack';
     }
 
     function hideSplash(){
@@ -1761,7 +1766,9 @@ ction id="content" class="content"></section>
 
       const button = event.target.closest('[data-action]');
 
-      if(!button) return;
+      if(!button){
+        return;
+      }
 
       const action = button.dataset.action;
 
@@ -1835,7 +1842,7 @@ ction id="content" class="content"></section>
       }
 
       try{
-        const response = await InTrackApi.call(action, payload || {});
+        const response = await iTrackApi.call(action, payload || {});
 
         hideLoader();
 
@@ -1922,10 +1929,6 @@ ction id="content" class="content"></section>
         state.user = data.user;
         state.config = data.config || state.config;
 
-        if(!state.config.logoUrl){
-          state.config.logoUrl = LOGO_URL;
-        }
-
         sessionStorage.setItem(SESSION_KEY, state.sessionToken);
         sessionStorage.setItem(USER_KEY, JSON.stringify(state.user));
 
@@ -1988,10 +1991,6 @@ ction id="content" class="content"></section>
         state.data = data || {};
         state.user = data.user;
         state.config = data.config || state.config;
-
-        if(!state.config.logoUrl){
-          state.config.logoUrl = LOGO_URL;
-        }
 
         sessionStorage.setItem(USER_KEY, JSON.stringify(state.user));
 
@@ -2073,7 +2072,7 @@ ction id="content" class="content"></section>
       }
 
       const title = {
-        dashboard:['Dashboard','Ringkasan data InTrack'],
+        dashboard:['Dashboard','Ringkasan data iTrack'],
         attendance:['Presensi','Presensi selfie dan dokumentasi lokasi'],
         activities:['Aktivitas Harian','Catatan aktivitas dan progres kerja'],
         reports:['Laporan Kerja','Laporan, approval, request edit, dan PDF'],
@@ -2106,10 +2105,12 @@ ction id="content" class="content"></section>
 
     function mobileHeader(){
       return '' +
-        '<div class="mobile-header">' +
+       lass="mobile-header">' +
           '<div class="mobile-header-top">' +
-            '<strong>InTrack</strong>' +
-            '<button class="btn outline small" style="background:rgba(255,255,255,.16);color:white;border:0" type="buttonl Data</div>' +
+            '<strong>iTrack</strong>' +
+            'logoutKeluar</button>' +
+          '</div>' +
+          '<div class="mobile-pill">' + esc(state.user.role) + ' • Real Data</div>' +
         '</div>';
     }
 
@@ -2124,7 +2125,7 @@ ction id="content" class="content"></section>
         '<div class="card" style="margin-bottom:18px">' +
           '<span class="badge navy">' + esc(state.user.role) + '</span>' +
           '<h3 style="margin-top:14px">Halo, ' + esc(state.user.name) + '</h3>' +
-          '<p>Data aplikasi diambil langsung dari backend InTrack.</p>' +
+          '<p>Data aplikasi diambil langsung dari backend iTrack.</p>' +
           progress(percent, approved + ' / ' + totalReports + ' laporan disetujui') +
           '<div class="actions">' +
             'guidePanduan</button>' +
@@ -2186,7 +2187,7 @@ ction id="content" class="content"></section>
 
       return '' +
         '<div class="card" style="margin-bottom:18px">' +
-          '<h3>Layanan InTrack</h3>' +
+          '<h3>Layanan iTrack</h3>' +
           '<div class="service-grid">' +
             items.map(function(item){
               return '' +
@@ -2205,7 +2206,7 @@ ction id="content" class="content"></section>
         '<div class="camera-layout">' +
           '<div class="card">' +
             '<h3>Presensi Selfie</h3>' +
-            '<p>Foto presensi diberi watermark di browser, lalu disimpan ke Drive InTrack.</p>' +
+            '<p>Foto presensi diberi watermark di browser, lalu disimpan ke Drive iTrack.</p>' +
             '<div id="cameraBox" class="camera-box">' +
               '<div>' +
                 '<div class="stat-icon i-blue" style="margin:0 auto 12px">📷</div>' +
@@ -2217,7 +2218,7 @@ ction id="content" class="content"></section>
               'start-cameraAktifkan Kamera</button>' +
               'capture-photoCapture</button>' +
               'get-gpsAmbil GPS</button>' +
-              '<button class="btn red"ton>' +
+              '<button class="kan</button>' +
             '</div>' +
           '</div>' +
           '<div class="card">' +
@@ -2259,7 +2260,6 @@ ction id="content" class="content"></section>
     function activitiesView(){
       const role = String(state.user.role || '').toUpperCase();
       const canCreate = role === 'INTERN';
-
       let form = '';
 
       if(canCreate){
@@ -2304,7 +2304,6 @@ ction id="content" class="content"></section>
     function reportsView(){
       const role = String(state.user.role || '').toUpperCase();
       const canCreate = role === 'INTERN';
-
       let form = '';
 
       if(canCreate){
@@ -2347,7 +2346,6 @@ ction id="content" class="content"></section>
     function tasksView(){
       const role = String(state.user.role || '').toUpperCase();
       const canCreate = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role);
-
       let form = '';
 
       if(canCreate){
@@ -2513,7 +2511,7 @@ ction id="content" class="content"></section>
       return '' +
         mobileHeader() +
         '<div class="card">' +
-          '<h3>Panduan Penggunaan InTrack</h3>' +
+          '<h3>Panduan Penggunaan iTrack</h3>' +
           '<p>Panduan ini dapat dibaca langsung dan diunduh oleh pengguna.</p>' +
           '<div class="actions">' +
             'download-guide-txtDownload TXT</button>' +
@@ -2539,7 +2537,8 @@ ction id="content" class="content"></section>
             '<span class="badge ' + statusClass(user.status) + '">' + esc(user.status) + '</span>' +
             '<div class="actions" style="justify-content:center">' +
               'install-appInstall</button>' +
-              '<button class="btn navy" type="button" data-action="fullscreenbutton>' +
+              'fullscreenFullscreen</button>' +
+              'logoutKeluar</button>' +
             '</div>' +
           '</div>' +
           '<div class="card">' +
@@ -2817,7 +2816,7 @@ ction id="content" class="content"></section>
 
     function drawWatermark(ctx,width,height){
       const lines = [
-        'INTRACK VERIFIED',
+        'ITRACK VERIFIED',
         'Nama: ' + (state.user.name || '-'),
         'Waktu: ' + new Date().toLocaleString('id-ID', { hour12:false }),
         'GPS: ' + (state.gps.latitude || '-') + ', ' + (state.gps.longitude || '-')
@@ -3217,11 +3216,11 @@ ction id="content" class="content"></section>
 
     function getGuideText(){
       return [
-        'PANDUAN PENGGUNAAN INTRACK',
+        'PANDUAN PENGGUNAAN iTRACK',
         'Versi: 1.0',
         '',
         '1. LOGIN',
-        '- Buka aplikasi InTrack.',
+        '- Buka aplikasi iTrack.',
         '- Masukkan email dan kata sandi.',
         '- Tekan tombol Masuk.',
         '- Jika akun belum aktif, hubungi admin untuk approval.',
@@ -3230,7 +3229,7 @@ ction id="content" class="content"></section>
         '- Setelah login, tekan tombol Install Aplikasi.',
         '- Jika tombol install belum muncul, buka menu browser.',
         '- Pilih Add to Home Screen atau Install App.',
-        '- Setelah terpasang, InTrack dapat dibuka seperti aplikasi perangkat.',
+        '- Setelah terpasang, iTrack dapat dibuka seperti aplikasi perangkat.',
         '',
         '3. FULLSCREEN',
         '- Tekan tombol Fullscreen pada dashboard atau sidebar.',
@@ -3288,19 +3287,19 @@ ction id="content" class="content"></section>
     }
 
     function downloadGuideTxt(){
-      downloadBlob('Panduan_InTrack.txt', new Blob([getGuideText()], {
+      downloadBlob('Panduan_iTrack.txt', new Blob([getGuideText()], {
         type:'text/plain;charset=utf-8'
       }));
     }
 
     function downloadGuideWord(){
       const html =
-        '<html><head><meta charset="UTF-8"><title>Panduan InTrack</title></head><body>' +
-        '<h1>Panduan Penggunaan InTrack</h1>' +
+        '<html><head><meta charset="UTF-8"><title>Panduan iTrack</title></head><body>' +
+        '<h1>Panduan Penggunaan iTrack</h1>' +
         '<pre style="font-family:Arial;white-space:pre-wrap;line-height:1.6">' + esc(getGuideText()) + '</pre>' +
         '</body></html>';
 
-      downloadBlob('Panduan_InTrack.doc', new Blob([html], {
+      downloadBlob('Panduan_iTrack.doc', new Blob([html], {
         type:'application/msword;charset=utf-8'
       }));
     }
