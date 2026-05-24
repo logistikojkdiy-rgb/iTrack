@@ -6,14 +6,16 @@
   <meta name="theme-color" content="#0F172A">
   <meta name="description" content="InTrack — Internship Tracker">
   <meta name="application-name" content="InTrack">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="InTrack">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <title>InTrack</title>
 
-  <link rel="icon" type="image/png" href="https://ik.imagekit.io/logojkdiy/InTrack.png">
-  <link rel="apple-touch-icon" href="https://ik.imagekit.io/logojkdiy/InTrack.png">
+  <link rel="icon" type="image/png" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
+  <link rel="shortcut icon" type="image/png" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
+  <link rel="apple-touch-icon" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
@@ -27,6 +29,7 @@
       --red:#DC2626;
       --purple:#7C3AED;
       --gray:#64748B;
+
       --soft-blue:#EFF6FF;
       --soft-green:#DCFCE7;
       --soft-amber:#FEF3C7;
@@ -34,14 +37,16 @@
       --soft-red:#FEE2E2;
       --soft-purple:#F3E8FF;
       --soft-gray:#F1F5F9;
+
       --bg:#F8FAFC;
       --card:#FFFFFF;
       --text:#0F172A;
       --muted:#64748B;
       --line:#E2E8F0;
+
       --shadow:0 22px 70px rgba(15,23,42,.12);
       --shadow2:0 10px 30px rgba(15,23,42,.07);
-      --side:276px;
+      --side:278px;
       --radius:26px;
     }
 
@@ -99,8 +104,8 @@
     }
 
     .logo-img.large {
-      width:96px;
-      height:96px;
+      width:100px;
+      height:100px;
       border-radius:30px;
       padding:12px;
     }
@@ -118,8 +123,8 @@
     }
 
     .logo-fallback.large {
-      width:96px;
-      height:96px;
+      width:100px;
+      height:100px;
       border-radius:30px;
       font-size:26px;
     }
@@ -226,8 +231,8 @@
     }
 
     .splash-logo {
-      width:130px;
-      height:130px;
+      width:132px;
+      height:132px;
       margin:0 auto 22px;
       position:relative;
       display:grid;
@@ -238,7 +243,7 @@
       content:"";
       position:absolute;
       inset:-8px;
-      border-radius:40px;
+      border-radius:42px;
       border:4px solid #DBEAFE;
       border-top-color:var(--blue);
       animation:spin .88s linear infinite;
@@ -298,13 +303,35 @@
       animation:spin .8s linear infinite;
     }
 
+    .loader-card strong {
+      display:block;
+      color:var(--navy);
+      font-weight:600;
+    }
+
+    .loader-card span {
+      display:block;
+      margin-top:6px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
     @keyframes spin {
-      to { transform:rotate(360deg); }
+      to {
+        transform:rotate(360deg);
+      }
     }
 
     @keyframes fadeUp {
-      from { opacity:0; transform:translateY(12px); }
-      to { opacity:1; transform:translateY(0); }
+      from {
+        opacity:0;
+        transform:translateY(12px);
+      }
+
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
     .auth {
@@ -408,6 +435,7 @@
     .hero-stat strong {
       display:block;
       font-size:22px;
+      font-weight:600;
     }
 
     .hero-stat span {
@@ -1280,7 +1308,7 @@
   <section id="splash" class="splash">
     <div class="splash-card">
       <div class="splash-logo">
-        <img id="splashLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack.png" alt="InTrack Logo">
+        <img id="splashLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="InTrack Logo">
       </div>
       <h1>INTRACK</h1>
       <p>Memuat aplikasi...</p>
@@ -1309,7 +1337,7 @@
     <div class="auth-shell">
       <aside class="hero">
         <div class="hero-brand">
-          <img id="heroLogo" class="logo-img" src="https://ik.imagekit.io/logojkdiy/InTrack.png" alt="InTrack Logo">
+          <img id="heroLogo" class="logo-img" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="InTrack Logo">
           <div>
             <strong>InTrack</strong>
             <span>Internship Tracker</span>
@@ -1322,15 +1350,24 @@
         </div>
 
         <div class="hero-stats">
-          <div class="hero-stat"><strong>Admin</strong><span>Approval, monitoring, dan laporan.</span></div>
-          <div class="hero-stat"><strong>Mentor</strong><span>Tugas, review, dan approval.</span></div>
-          <div class="hero-stat"><strong>Intern</strong><span>Presensi, aktivitas, dan laporan.</span></div>
+          <div class="hero-stat">
+            <strong>Admin</strong>
+            <span>Approval, monitoring, dan laporan.</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Mentor</strong>
+            <span>Tugas, review, dan approval.</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Intern</strong>
+            <span>Presensi, aktivitas, dan laporan.</span>
+          </div>
         </div>
       </aside>
 
       <main class="auth-card">
         <div class="mobile-auth-brand">
-          <img id="mobileLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack.png" alt="InTrack Logo">
+          <img id="mobileLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="InTrack Logo">
           <strong>InTrack</strong>
           <span>Internship Tracker</span>
         </div>
@@ -1363,28 +1400,58 @@
 
         <div id="pane-register" class="pane">
           <form id="registerForm" novalidate>
-            <div class="field"><label>Nama Lengkap</label><input id="regName" placeholder="Nama lengkap"></div>
-            <div class="field"><label>Email</label><input id="regEmail" type="email" placeholder="email@domain.com"></div>
-            <div class="field"><label>Nomor Telepon</label><input id="regPhone" placeholder="08xxxxxxxxxx"></div>
-            <div class="field"><label>Kata Sandi</label><input id="regPassword" type="password" placeholder="Minimal 8 karakter"></div>
-            <div class="field"><label>Konfirmasi Kata Sandi</label><input id="regConfirmPassword" type="password" placeholder="Ulangi kata sandi"></div>
+            <div class="field">
+              <label>Nama Lengkap</label>
+              <input id="regName" placeholder="Nama lengkap">
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input id="regEmail" type="email" placeholder="email@domain.com">
+            </div>
+            <div class="field">
+              <label>Nomor Telepon</label>
+              <input id="regPhone" placeholder="08xxxxxxxxxx">
+            </div>
+            <div class="field">
+              <label>Kata Sandi</label>
+              <input id="regPassword" type="password" placeholder="Minimal 8 karakter">
+            </div>
+            <div class="field">
+              <label>Konfirmasi Kata Sandi</label>
+              <input id="regConfirmPassword" type="password" placeholder="Ulangi kata sandi">
+            </div>
             <button class="btn block" type="submit">Daftar sebagai Intern</button>
           </form>
         </div>
 
         <div id="pane-forgot" class="pane">
           <form id="forgotForm" novalidate>
-            <div class="field"><label>Email</label><input id="forgotEmail" type="email" placeholder="email@domain.com"></div>
+            <div class="field">
+              <label>Email</label>
+              <input id="forgotEmail" type="email" placeholder="email@domain.com">
+            </div>
             <button class="btn block" type="submit">Kirim Token Reset</button>
           </form>
         </div>
 
         <div id="pane-reset" class="pane">
           <form id="resetForm" novalidate>
-            <div class="field"><label>Email</label><input id="resetEmail" type="email"></div>
-            <div class="field"><label>Token Reset</label><input id="resetToken" placeholder="Token dari email"></div>
-            <div class="field"><label>Kata Sandi Baru</label><input id="resetPassword" type="password"></div>
-            <div class="field"><label>Konfirmasi Kata Sandi Baru</label><input id="resetConfirmPassword" type="password"></div>
+            <div class="field">
+              <label>Email</label>
+              <input id="resetEmail" type="email">
+            </div>
+            <div class="field">
+              <label>Token Reset</label>
+              <input id="resetToken" placeholder="Token dari email">
+            </div>
+            <div class="field">
+              <label>Kata Sandi Baru</label>
+              <input id="resetPassword" type="password">
+            </div>
+            <div class="field">
+              <label>Konfirmasi Kata Sandi Baru</label>
+              <input id="resetConfirmPassword" type="password">
+            </div>
             <button class="btn block" type="submit">Reset Kata Sandi</button>
           </form>
         </div>
@@ -1394,22 +1461,16 @@
 
   <main id="app" class="app hidden">
     <aside class="sidebar">
-      <div class="app-brand">
-        <img id="sidebarLogo" class="logo-img" src="https://ik.imagekit.io/logojkdiy/InTrack.png" alt="InTrack Logo">
+      <div     <header class="topbar">
         <div>
-          <strong>InTrack</strong>
-          <span>Real Data</span>
+          <h2 id="pageTitle">Dashboard</h2>
+          <p id="pageSubtitle">Ringkasan data InTrack</p>
         </div>
-      </div>
-
-      <nav id="sideNav" class="nav"></nav>
-
-      <div class="sidebar-footer">
-        <div class="user-box">
-          <strong id="sideName">User</strong>
-          <span id="sideRole">Role</span>
-        </div>
-        <button class="btn light block" type="button" data-action="install-apputline" type="button" data-action="refresh          <button class="btn navy"tton>
+        <div class="top-actions">
+          guidePanduan</button>
+          refreshRefresh</button>
+          install-appInstall</button>
+          fullscreenFullscreen</button>
           <button class="avatar" id="avatarBtn" type="button">IT</button>
         </div>
       </header>
@@ -1426,11 +1487,11 @@
     'use strict';
 
     const APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/a/macros/pepklms.com/s/AKfycbxXPAv1bmT-jubxF3KDFAmthv3dN01j1shg3RXlyv4cqPcuwviqZZj0PwZK4XiRoYuA/exec';
+    const LOGO_URL = 'https://ik.imagekit.io/logojkdiy/InTrack%20(1).png';
     const BRIDGE_URL = APPS_SCRIPT_WEB_APP_URL.indexOf('?') >= 0 ? APPS_SCRIPT_WEB_APP_URL + '&page=bridge' : APPS_SCRIPT_WEB_APP_URL + '?page=bridge';
 
     const SESSION_KEY = 'INTRACK_SESSION_TOKEN';
     const USER_KEY = 'INTRACK_SESSION_USER';
-    const LOGO_URL = 'https://ik.imagekit.io/logojkdiy/InTrack.png';
 
     const MENU = [
       { id:'dashboard', label:'Dashboard', icon:'▦', roles:['SUPER ADMIN','ADMIN','MENTOR','INTERN'] },
@@ -1448,14 +1509,21 @@
     let deferredInstallPrompt = null;
 
     let state = {
-      config:{ appName:'InTrack', appFullName:'InTrack — Internship Tracker', logoUrl:LOGO_URL },
+      config:{
+        appName:'InTrack',
+        appFullName:'InTrack — Internship Tracker',
+        logoUrl:LOGO_URL
+      },
       sessionToken:'',
       user:null,
       data:null,
       page:'dashboard',
       stream:null,
       photoBase64:'',
-      gps:{ latitude:'', longitude:'' },
+      gps:{
+        latitude:'',
+        longitude:''
+      },
       pendingModalAction:null
     };
 
@@ -1465,49 +1533,52 @@
       callbacks:{},
 
       init:function(){
-        return new Promise((resolve,reject)=>{
-          if(this.ready && this.iframe){
+        return new Promise(function(resolve,reject){
+          if(InTrackApi.ready && InTrackApi.iframe){
             resolve();
             return;
           }
 
           const iframe = document.getElementById('bridgeFrame');
           iframe.src = BRIDGE_URL;
-          this.iframe = iframe;
+          InTrackApi.iframe = iframe;
 
-          const timeout = setTimeout(()=>{
+          const timeout = setTimeout(function(){
             reject({
               success:false,
               message:'Bridge Apps Script timeout. Pastikan Web App dan Bridge.html sudah aktif.'
             });
           },25000);
 
-          const readyListener = (event)=>{
+          function readyListener(event){
             const data = event.data || {};
             if(data.source === 'INTRACK_APPS_SCRIPT_BRIDGE_READY'){
               clearTimeout(timeout);
               window.removeEventListener('message', readyListener);
-              this.ready = true;
+              InTrackApi.ready = true;
               resolve();
             }
-          };
+          }
 
           window.addEventListener('message', readyListener);
         });
       },
 
       listen:function(){
-        window.addEventListener('message',(event)=>{
+        window.addEventListener('message',function(event){
           const data = event.data || {};
           if(data.source !== 'INTRACK_APPS_SCRIPT_BRIDGE') return;
 
-          const callback = this.callbacks[data.requestId];
+          const callback = InTrackApi.callbacks[data.requestId];
           if(!callback) return;
 
-          delete this.callbacks[data.requestId];
+          delete InTrackApi.callbacks[data.requestId];
 
           if(!data.success){
-            callback.reject(data.response || { success:false, message:'Bridge error.' });
+            callback.reject(data.response || {
+              success:false,
+              message:'Bridge error.'
+            });
             return;
           }
 
@@ -1516,24 +1587,30 @@
       },
 
       call:async function(action,payload){
-        await this.init();
+        await InTrackApi.init();
 
-        return new Promise((resolve,reject)=>{
+        return new Promise(function(resolve,reject){
           const requestId = 'REQ-' + Date.now() + '-' + Math.random().toString(16).slice(2);
 
-          this.callbacks[requestId] = { resolve, reject };
+          InTrackApi.callbacks[requestId] = {
+            resolve:resolve,
+            reject:reject
+          };
 
-          this.iframe.contentWindow.postMessage({
+          InTrackApi.iframe.contentWindow.postMessage({
             source:'INTRACK_GITHUB_FRONTEND',
-            requestId,
-            action,
+            requestId:requestId,
+            action:action,
             payload:payload || {}
           }, '*');
 
-          setTimeout(()=>{
-            if(this.callbacks[requestId]){
-              delete this.callbacks[requestId];
-              reject({ success:false, message:'Request timeout.' });
+          setTimeout(function(){
+            if(InTrackApi.callbacks[requestId]){
+              delete InTrackApi.callbacks[requestId];
+              reject({
+                success:false,
+                message:'Request timeout.'
+              });
             }
           },60000);
         });
@@ -1551,9 +1628,15 @@
     document.addEventListener('click', handleClick);
     document.addEventListener('submit', handleSubmit);
 
-    window.addEventListener('load', ()=>setTimeout(hideSplash,600));
-    window.addEventListener('error', ()=>setTimeout(hideSplash,300));
-    setTimeout(hideSplash,1800);
+    window.addEventListener('load', function(){
+      setTimeout(hideSplash, 600);
+    });
+
+    window.addEventListener('error', function(){
+      setTimeout(hideSplash, 300);
+    });
+
+    setTimeout(hideSplash, 1800);
 
     setupPwaManifest();
 
@@ -1589,12 +1672,14 @@
       try{
         const savedUser = sessionStorage.getItem(USER_KEY);
         state.user = savedUser ? JSON.parse(savedUser) : null;
-      }catch(err){
+      }catch(error){
         state.user = null;
       }
 
       callApi('APP_CONFIG', {}, function(config){
         state.config = config || state.config;
+        if(!state.config.logoUrl) state.config.logoUrl = LOGO_URL;
+
         applyConfig();
 
         if(state.sessionToken){
@@ -1620,10 +1705,13 @@
 
     function applyConfig(){
       const logo = state.config.logoUrl || LOGO_URL;
-      ['splashLogo','heroLogo','mobileLogo','sidebarLogo'].forEach(function(id){
+      const ids = ['splashLogo','heroLogo','mobileLogo','sidebarLogo'];
+
+      ids.forEach(function(id){
         const img = document.getElementById(id);
         if(img) img.src = logo;
       });
+
       document.title = state.config.appName || 'InTrack';
     }
 
@@ -1645,23 +1733,23 @@
       hideSplash();
     }
 
-    function handleClick(e){
-      const tab = e.target.closest('[data-auth-tab]');
+    function handleClick(event){
+      const tab = event.target.closest('[data-auth-tab]');
       if(tab){
         switchAuthTab(tab.dataset.authTab);
         return;
       }
 
-      const routeBtn = e.target.closest('[data-page]');
-      if(routeBtn){
-        route(routeBtn.dataset.page);
+      const routeButton = event.target.closest('[data-page]');
+      if(routeButton){
+        route(routeButton.dataset.page);
         return;
       }
 
-      const btn = e.target.closest('[data-action]');
-      if(!btn) return;
+      const button = event.target.closest('[data-action]');
+      if(!button) return;
 
-      const action = btn.dataset.action;
+      const action = button.dataset.action;
 
       if(action === 'logout') logout();
       if(action === 'refresh') loadApp();
@@ -1675,13 +1763,13 @@
       if(action === 'get-gps') getGps();
       if(action === 'save-attendance') saveAttendance();
 
-      if(action === 'open-request-edit') openRequestEditModal(btn.dataset.id);
-      if(action === 'open-submit-task') openSubmitTaskModal(btn.dataset.id);
-      if(action === 'open-review-task') openReviewTaskModal(btn.dataset.id);
-      if(action === 'approve-report') approveReport(btn.dataset.id);
+      if(action === 'open-request-edit') openRequestEditModal(button.dataset.id);
+      if(action === 'open-submit-task') openSubmitTaskModal(button.dataset.id);
+      if(action === 'open-review-task') openReviewTaskModal(button.dataset.id);
+      if(action === 'approve-report') approveReport(button.dataset.id);
 
-      if(action === 'admin-approve-user') adminUpdateUser(btn.dataset.email, 'ACTIVE', btn.dataset.role || 'INTERN');
-      if(action === 'admin-reject-user') adminUpdateUser(btn.dataset.email, 'REJECTED', '');
+      if(action === 'admin-approve-user') adminUpdateUser(button.dataset.email, 'ACTIVE', button.dataset.role || 'INTERN');
+      if(action === 'admin-reject-user') adminUpdateUser(button.dataset.email, 'REJECTED', '');
 
       if(action === 'download-guide-txt') downloadGuideTxt();
       if(action === 'download-guide-word') downloadGuideWord();
@@ -1690,39 +1778,39 @@
       if(action === 'confirm-modal-action') runPendingModalAction();
     }
 
-    function handleSubmit(e){
-      if(e.target.id === 'loginForm'){
-        e.preventDefault();
+    function handleSubmit(event){
+      if(event.target.id === 'loginForm'){
+        event.preventDefault();
         login();
       }
 
-      if(e.target.id === 'registerForm'){
-        e.preventDefault();
+      if(event.target.id === 'registerForm'){
+        event.preventDefault();
         registerManual();
       }
 
-      if(e.target.id === 'forgotForm'){
-        e.preventDefault();
+      if(event.target.id === 'forgotForm'){
+        event.preventDefault();
         forgotPassword();
       }
 
-      if(e.target.id === 'resetForm'){
-        e.preventDefault();
+      if(event.target.id === 'resetForm'){
+        event.preventDefault();
         resetPassword();
       }
 
-      if(e.target.id === 'activityForm'){
-        e.preventDefault();
+      if(event.target.id === 'activityForm'){
+        event.preventDefault();
         saveActivity();
       }
 
-      if(e.target.id === 'reportForm'){
-        e.preventDefault();
+      if(event.target.id === 'reportForm'){
+        event.preventDefault();
         saveReport();
       }
 
-      if(e.target.id === 'taskForm'){
-        e.preventDefault();
+      if(event.target.id === 'taskForm'){
+        event.preventDefault();
         createTask();
       }
     }
@@ -1731,22 +1819,32 @@
       if(withLoader !== false) showLoader();
 
       try{
-        const res = await InTrackApi.call(action, payload || {});
+        const response = await InTrackApi.call(action, payload || {});
         hideLoader();
 
-        if(!res || !res.success){
-          const message = res && res.message ? res.message : 'Terjadi kesalahan.';
-          if(onFail) onFail(message);
-          else showModal('Gagal', message, '', [{ label:'Tutup', className:'light', action:'close-modal' }]);
+        if(!response || !response.success){
+          const message = response && response.message ? response.message : 'Terjadi kesalahan.';
+          if(onFail){
+            onFail(message);
+          }else{
+            showModal('Gagal', message, '', [
+              { label:'Tutup', className:'light', action:'close-modal' }
+            ]);
+          }
           return;
         }
 
-        if(onSuccess) onSuccess(res.data);
-      }catch(err){
+        if(onSuccess) onSuccess(response.data);
+      }catch(error){
         hideLoader();
-        const message = err && err.message ? err.message : String(err || 'Terjadi kesalahan.');
-        if(onFail) onFail(message);
-        else showModal('Error', message, '', [{ label:'Tutup', className:'light', action:'close-modal' }]);
+        const message = error && error.message ? error.message : String(error || 'Terjadi kesalahan.');
+        if(onFail){
+          onFail(message);
+        }else{
+          showModal('Error', message, '', [
+            { label:'Tutup', className:'light', action:'close-modal' }
+          ]);
+        }
       }
     }
 
@@ -1768,8 +1866,8 @@
         reset:['Reset Kata Sandi','Masukkan token dari email untuk mengganti kata sandi.']
       };
 
-      document.querySelectorAll('.tab').forEach(function(btn){
-        btn.classList.toggle('active', btn.dataset.authTab === tab);
+      document.querySelectorAll('.tab').forEach(function(button){
+        button.classList.toggle('active', button.dataset.authTab === tab);
       });
 
       document.querySelectorAll('.pane').forEach(function(pane){
@@ -1786,18 +1884,22 @@
       const password = val('loginPassword');
 
       if(!email || !password){
-        showModal('Data Belum Lengkap','Email dan kata sandi wajib diisi.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Data Belum Lengkap', 'Email dan kata sandi wajib diisi.', '', [
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
         return;
       }
 
       callApi('LOGIN_MANUAL', {
-        email,
-        password,
+        email:email,
+        password:password,
         device:navigator.userAgent
       }, function(data){
         state.sessionToken = data.sessionToken;
         state.user = data.user;
         state.config = data.config || state.config;
+
+        if(!state.config.logoUrl) state.config.logoUrl = LOGO_URL;
 
         sessionStorage.setItem(SESSION_KEY, state.sessionToken);
         sessionStorage.setItem(USER_KEY, JSON.stringify(state.user));
@@ -1814,15 +1916,22 @@
         password:val('regPassword'),
         confirmPassword:val('regConfirmPassword')
       }, function(data){
-        showModal('Registrasi Berhasil', data.message || 'Akun menunggu approval admin.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Registrasi Berhasil', data.message || 'Akun menunggu approval admin.', '', [
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
+
         switchAuthTab('login');
         document.getElementById('registerForm').reset();
       });
     }
 
     function forgotPassword(){
-      callApi('FORGOT_PASSWORD', { email:val('forgotEmail') }, function(data){
-        showModal('Berhasil', data.message || 'Instruksi reset dikirim jika email terdaftar.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+      callApi('FORGOT_PASSWORD', {
+        email:val('forgotEmail')
+      }, function(data){
+        showModal('Berhasil', data.message || 'Instruksi reset dikirim jika email terdaftar.', '', [
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       });
     }
 
@@ -1833,7 +1942,10 @@
         newPassword:val('resetPassword'),
         confirmPassword:val('resetConfirmPassword')
       }, function(data){
-        showModal('Berhasil', data.message || 'Kata sandi diperbarui.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Berhasil', data.message || 'Kata sandi diperbarui.', '', [
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
+
         switchAuthTab('login');
         document.getElementById('resetForm').reset();
       });
@@ -1845,10 +1957,14 @@
         return;
       }
 
-      callApi('LOAD_APP', { sessionToken:state.sessionToken }, function(data){
+      callApi('LOAD_APP', {
+        sessionToken:state.sessionToken
+      }, function(data){
         state.data = data;
         state.user = data.user;
         state.config = data.config || state.config;
+
+        if(!state.config.logoUrl) state.config.logoUrl = LOGO_URL;
 
         sessionStorage.setItem(USER_KEY, JSON.stringify(state.user));
 
@@ -1860,10 +1976,16 @@
       }, function(message){
         sessionStorage.removeItem(SESSION_KEY);
         sessionStorage.removeItem(USER_KEY);
+
         state.sessionToken = '';
         state.user = null;
+        state.data = null;
+
         showAuth();
-        showModal('Sesi Berakhir', message, '', [{ label:'Tutup', className:'light', action:'close-modal' }]);
+
+        showModal('Sesi Berakhir', message, '', [
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       });
     }
 
@@ -1875,23 +1997,27 @@
 
     function allowedMenus(){
       const role = String(state.user && state.user.role || '').toUpperCase();
-      return MENU.filter(function(menu){ return menu.roles.includes(role); });
+
+      return MENU.filter(function(menu){
+        return menu.roles.includes(role);
+      });
     }
 
     function canAccess(page){
-      return allowedMenus().some(function(menu){ return menu.id === page; });
+      return allowedMenus().some(function(menu){
+        return menu.id === page;
+      });
     }
 
     function renderNav(){
       const allowed = allowedMenus();
 
       document.getElementById('sideNav').innerHTML = allowed.map(function(menu){
-        return `
-          <button class="${state.page === menu.id ? 'active' : ''}" type="button" data-page="${menu.id}">
-            <span>${menu.icon}</span>
-            <span>${menu.label}</span>
-          </button>
-        `;
+        return '' +
+          '<button class="' + (state.page === menu.id ? 'active' : '') + '" type="button" data-page="' + escAttr(menu.id) + '">' +
+            '<span>' + menu.icon + '</span>' +
+            '<span>' + esc(menu.label) + '</span>' +
+          '</button>';
       }).join('');
 
       const bottom = allowed.filter(function(menu){
@@ -1899,11 +2025,10 @@
       }).slice(0,5);
 
       document.getElementById('bottomNav').innerHTML = bottom.map(function(menu){
-        return `
-          <button class="${state.page === menu.id ? 'active' : ''}" type="button" data-page="${menu.id}">
-            <span>${menu.icon}</span><br>${menu.label}
-          </button>
-        `;
+        return '' +
+          '<button class="' + (state.page === menu.id ? 'active' : '') + '" type="button" data-page="' + escAttr(menu.id) + '">' +
+            '<span>' + menu.icon + '</span><br>' + esc(menu.label) +
+          '</button>';
       }).join('');
     }
 
@@ -1911,6 +2036,7 @@
       stopCamera();
 
       if(!canAccess(page)) page = 'dashboard';
+
       state.page = page;
 
       if(rerenderNav !== false) renderNav();
@@ -1947,62 +2073,59 @@
       document.getElementById('content').innerHTML = views[page]();
     }
 
-    function mobileHeader(){
-      return `
-        <div class="mobile-header">
-          <div class="mobile-header-top">
-            <strong>InTrack</strong>
-            <button class="btn outline small" style="background:rgba(255,255,255,.16);color:white;border:0" type="button" data-action="logout`;
+    function mobile{
+      return '' +
+        '<div class="mobile-header">' +
+          '<div class="mobile-header-top">' +
+            '<strong>InTrack</strong>' +
+            'logoutKeluar</button>' +
+          '</div>' +
+          '<div class="mobile-pill">' + esc(state.user.role) + ' • Real Data</div>' +
+        '</div>';
     }
 
     function dashboardView(){
-      const s = (state.data || {}).summary || {};
-      const totalReports = Number(s.totalReports || 0);
-      const approved = Number(s.reportsApproved || 0);
-      const pct = totalReports ? Math.round(approved / totalReports * 100) : 0;
+      const summary = state.data.summary || {};
+      const totalReports = Number(summary.totalReports || 0);
+      const approved = Number(summary.reportsApproved || 0);
+      const percent = totalReports ? Math.round(approved / totalReports * 100) : 0;
 
-      return `
-        ${mobileHeader()}
-
-        <div class="card" style="margin-bottom:18px">
-          <span class="badge navy">${esc(state.user.role)}</span>
-          <h3 style="margin-top:14px">Halo, ${esc(state.user.name)}</h3>
-          <p>Data aplikasi diambil langsung dari backend InTrack.</p>
-          ${progress(pct, approved + ' / ' + totalReports + ' laporan disetujui')}
-          <div class="actions">
-            <button class/button>
-            install-appInstall Aplikasi</button>
-            fullscreenFullscreen</button>
-          </div>
-        </div>
-
-        ${servicesView()}
-
-        <div class="grid grid-4">
-          ${stat('📷', s.totalAttendance || 0, 'Presensi', 'Total data presensi')}
-          ${stat('🗓', s.totalActivities || 0, 'Aktivitas', 'Aktivitas harian')}
-          ${stat('📄', s.totalReports || 0, 'Laporan', 'Laporan kerja')}
-          ${stat('☑', s.totalTasks || 0, 'Tugas', 'Tugas mentor')}
-        </div>
-
-        <div class="section-head">
-          <div>
-            <h3>Data Terbaru</h3>
-            <p>Ringkasan laporan dan tugas terakhir.</p>
-          </div>
-        </div>
-
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Laporan Terbaru</h3>
-            <div class="list">${latestReportsHtml()}</div>
-          </div>
-          <div class="card">
-            <h3>Tugas Terbaru</h3>
-            <div class="list">${latestTasksHtml()}</div>
-          </div>
-        </div>
-      `;
+      return '' +
+        mobileHeader() +
+        '<div class="card" style="margin-bottom:18px">' +
+          '<span class="badge navy">' + esc(state.user.role) + '</span>' +
+          '<h3 style="margin-top:14px">Halo, ' + esc(state.user.name) + '</h3>' +
+          '<p>Data aplikasi diambil langsung dari backend InTrack.</p>' +
+          progress(percent, approved + ' / ' + totalReports + ' laporan disetujui') +
+          '<div class="actions">' +
+            'guidePanduan</button>' +
+            'install-appInstall Aplikasi</button>' +
+            'fullscreenFullscreen</button>' +
+          '</div>' +
+        '</div>' +
+        servicesView() +
+        '<div class="grid grid-4">' +
+          stat('📷', summary.totalAttendance || 0, 'Presensi', 'Total data presensi') +
+          stat('🗓', summary.totalActivities || 0, 'Aktivitas', 'Aktivitas harian') +
+          stat('📄', summary.totalReports || 0, 'Laporan', 'Laporan kerja') +
+          stat('☑', summary.totalTasks || 0, 'Tugas', 'Tugas mentor') +
+        '</div>' +
+        '<div class="section-head">' +
+          '<div>' +
+            '<h3>Data Terbaru</h3>' +
+            '<p>Ringkasan laporan dan tugas terakhir.</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="grid grid-2">' +
+          '<div class="card">' +
+            '<h3>Laporan Terbaru</h3>' +
+            '<div class="list">' + latestReportsHtml() + '</div>' +
+          '</div>' +
+          '<div class="card">' +
+            '<h3>Tugas Terbaru</h3>' +
+            '<div class="list">' + latestTasksHtml() + '</div>' +
+          '</div>' +
+        '</div>';
     }
 
     function servicesView(){
@@ -2032,255 +2155,251 @@
         ];
       }
 
-      return `
-        <div class="card" style="margin-bottom:18px">
-          <h3>Layanan InTrack</h3>
-          <div class="service-grid">
-            ${items.map(function(item){
-              return `
-                <button class="service-btn" type="button" data-page="${item[0]}">
-                  <div class="stat-icon i-${item[3]}">${item[2]}</div>
-                  <span>${item[1]}</span>
-                </button>
-              `;
-            }).join('')}
-          </div>
-        </div>
-      `;
+      return '' +
+        '<div class="card" style="margin-bottom:18px">' +
+          '<h3>Layanan InTrack</h3>' +
+          '<div class="service-grid">' +
+            items.map(function(item){
+              return '' +
+                '<button class="service-btn" type="button" data-page="' + escAttr(item[0]) + '">' +
+                  '<div class="stat-icon i-' + escAttr(item[3]) + '">' + item[2] + '</div>' +
+                  '<span>' + esc(item[1]) + '</span>' +
+                '</button>';
+            }).join('') +
+          '</div>' +
+        '</div>';
     }
 
     function attendanceView(){
-      return `
-        ${mobileHeader()}
-        <div class="camera-layout">
-          <div class="card">
-            <h3>Presensi Selfie</h3>
-            <p>Foto presensi diberi watermark di browser, lalu disimpan ke Drive InTrack.</p>
-            <div id="cameraBox" class="camera-box">
-              <div>
-                <div class="stat-icon i-blue" style="margin:0 auto 12px">📷</div>
-                Kamera belum aktif
-              </div>
-              <div class="camera-caption">Aktifkan kamera untuk mengambil foto presensi.</div>
-            </div>
-            <div class="actions">
-              start-cameraAktifkan Kamera</button>
-              <button class="btn outline" type="button" datat-gpsAmbil GPS</button>
-              <button class="btn</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Submit Presensi</h3>
-            <div id="photoPreview" class="preview">Foto tampil di sini</div>
-
-            <div class="field" style="margin-top:16px">
-              <label>Mode Presensi</label>
-              <select id="attMode">
-                <option value="MASUK">Masuk</option>
-                <option value="PULANG">Pulang</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label>Status Kehadiran</label>
-              <select id="attStatus">
-                <option value="HADIR">Hadir</option>
-                <option value="IZIN">Izin</option>
-                <option value="SAKIT">Sakit</option>
-                <option value="TUGAS LUAR">Tugas Luar</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label>Catatan</label>
-              <textarea id="attNote" placeholder="Opsional"></textarea>
-            </div>
-
-            <p id="gpsInfo" style="margin-top:0">GPS: belum diambil.</p>
-            <button class="btn block" type="button" data-action/div>
-        </div>
-
-        <div class="section-head">
-          <div>
-            <h3>Riwayat Presensi</h3>
-            <p>Data presensi tersimpan di sheet PRESENSI.</p>
-          </div>
-        </div>
-
-        <div class="list">${attendanceListHtml()}</div>
-      `;
+      return '' +
+        mobileHeader() +
+        '<div class="camera-layout">' +
+          '<div class="card">' +
+            '<h3>Presensi Selfie</h3>' +
+            '<p>Foto presensi diberi watermark di browser, lalu disimpan ke Drive InTrack.</p>' +
+            '<div id="cameraBox" class="camera-box">' +
+              '<div>' +
+                '<div class="stat-icon i-blue" style="margin:0 auto 12px">📷</div>' +
+                'Kamera belum aktif' +
+              '</div>' +
+              '<div class="camera-caption">Aktifkan kamera untuk mengambil foto presensi.</div>' +
+            '</div>' +
+            '<div class="actions">' +
+              '<button class="btn" type="button" data-action="start-cameraure-photoCapture</button>' +
+              'get-gpsAmbil GPS</button>' +
+              'stop-cameraMatikan</button>' +
+            '</div>' +
+          '</div>' +
+          '<div class="card">' +
+            '<h3>Submit Presensi</h3>' +
+            '<div id="photoPreview" class="preview">Foto tampil di sini</div>' +
+            '<div class="field" style="margin-top:16px">' +
+              '<label>Mode Presensi</label>' +
+              '<select id="attMode">' +
+                '<option value="MASUK">Masuk</option>' +
+                '<option value="PULANG">Pulang</option>' +
+              '</select>' +
+            '</div>' +
+            '<div class="field">' +
+              '<label>Status Kehadiran</label>' +
+              '<select id="attStatus">' +
+                '<option value="HADIR">Hadir</option>' +
+                '<option value="IZIN">Izin</option>' +
+                '<option value="SAKIT">Sakit</option>' +
+                '<option value="TUGAS LUAR">Tugas Luar</option>' +
+              '</select>' +
+            '</div>' +
+            '<div class="field">' +
+              '<label>Catatan</label>' +
+              '<textarea id="attNote" placeholder="Opsional"></textarea>' +
+            '</div>' +
+            '<p id="gpsInfo" style="margin-top:0">GPS: belum diambil.</p>' +
+            'save-attendanceSimpan Presensi</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="section-head">' +
+          '<div>' +
+            '<h3>Riwayat Presensi</h3>' +
+            '<p>Data presensi tersimpan di sheet PRESENSI.</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="list">' + attendanceListHtml() + '</div>';
     }
 
     function activitiesView(){
       const role = String(state.user.role || '').toUpperCase();
       const canCreate = role === 'INTERN';
 
-      return `
-        ${mobileHeader()}
-        <div class="grid grid-2">
-          ${canCreate ? `
-            <div class="card">
-              <h3>Aktivitas Harian</h3>
-              <form id="activityForm" novalidate>
-                ${fieldInput('actDate','Tanggal','date')}
-                ${fieldInput('actTitle','Judul Aktivitas','text','Contoh: Dokumentasi kegiatan unit')}
-                <div class="field">
-                  <label>Kategori</label>
-                  <select id="actCategory">
-                    <option>ADMINISTRASI</option>
-                    <option>OPERASIONAL</option>
-                    <option>TEKNIS</option>
-                    <option>DOKUMENTASI</option>
-                    <option>PELAYANAN</option>
-                    <option>LAINNYA</option>
-                  </select>
-                </div>
-                ${fieldInput('actDuration','Durasi Jam','number','Contoh: 4')}
-                ${fieldTextarea('actDescription','Deskripsi Aktivitas')}
-                ${fieldTextarea('actResult','Hasil Pekerjaan')}
-                ${fieldTextarea('actObstacle','Kendala')}
-                ${fieldTextarea('actNextPlan','Rencana Lanjutan')}
-                <button class="btn block" type="submit">Simpan Aktivitas</button>
-              </form>
-            </div>
-          ` : ''}
+      let form = '';
 
-          <div class="card" style="${canCreate ? '' : 'grid-column:1/-1'}">
-            <h3>Daftar Aktivitas</h3>
-            <div class="list">${activitiesListHtml()}</div>
-          </div>
-        </div>
-      `;
+      if(canCreate){
+        form = '' +
+          '<div class="card">' +
+            '<h3>Aktivitas Harian</h3>' +
+            '<form id="activityForm" novalidate>' +
+              fieldInput('actDate','Tanggal','date') +
+              fieldInput('actTitle','Judul Aktivitas','text','Contoh: Dokumentasi kegiatan unit') +
+              '<div class="field">' +
+                '<label>Kategori</label>' +
+                '<select id="actCategory">' +
+                  '<option>ADMINISTRASI</option>' +
+                  '<option>OPERASIONAL</option>' +
+                  '<option>TEKNIS</option>' +
+                  '<option>DOKUMENTASI</option>' +
+                  '<option>PELAYANAN</option>' +
+                  '<option>LAINNYA</option>' +
+                '</select>' +
+              '</div>' +
+              fieldInput('actDuration','Durasi Jam','number','Contoh: 4') +
+              fieldTextarea('actDescription','Deskripsi Aktivitas') +
+              fieldTextarea('actResult','Hasil Pekerjaan') +
+              fieldTextarea('actObstacle','Kendala') +
+              fieldTextarea('actNextPlan','Rencana Lanjutan') +
+              '<button class="btn block" type="submit">Simpan Aktivitas</button>' +
+            '</form>' +
+          '</div>';
+      }
+
+      return '' +
+        mobileHeader() +
+        '<div class="grid grid-2">' +
+          form +
+          '<div class="card" style="' + (canCreate ? '' : 'grid-column:1/-1') + '">' +
+            '<h3>Daftar Aktivitas</h3>' +
+            '<div class="list">' + activitiesListHtml() + '</div>' +
+          '</div>' +
+        '</div>';
     }
 
     function reportsView(){
       const role = String(state.user.role || '').toUpperCase();
       const canCreate = role === 'INTERN';
 
-      return `
-        ${mobileHeader()}
-        <div class="grid grid-2">
-          ${canCreate ? `
-            <div class="card">
-              <h3>Buat Laporan Kerja</h3>
-              <form id="reportForm" novalidate>
-                ${fieldInput('repDate','Tanggal Laporan','date')}
-                <div class="field">
-                  <label>Jenis Laporan</label>
-                  <select id="repType">
-                    <option>HARIAN</option>
-                    <option>MINGGUAN</option>
-                    <option>BULANAN</option>
-                    <option>AKHIR MAGANG</option>
-                  </select>
-                </div>
-                ${fieldInput('repTitle','Judul Laporan')}
-                ${fieldTextarea('repContent','Isi Laporan')}
-                ${fieldTextarea('repAchievement','Capaian')}
-                ${fieldTextarea('repObstacle','Kendala')}
-                ${fieldTextarea('repSolution','Solusi')}
-                ${fieldTextarea('repLearning','Pembelajaran')}
-                <button class="btn block" type="submit">Kirim Laporan</button>
-              </form>
-            </div>
-          ` : ''}
+      let form = '';
 
-          <div class="card" style="${canCreate ? '' : 'grid-column:1/-1'}">
-            <h3>Daftar Laporan</h3>
-            <div class="list">${reportsListHtml()}</div>
-          </div>
-        </div>
-      `;
+      if(canCreate){
+        form = '' +
+          '<div class="card">' +
+            '<h3>Buat Laporan Kerja</h3>' +
+            '<form id="reportForm" novalidate>' +
+              fieldInput('repDate','Tanggal Laporan','date') +
+              '<div class="field">' +
+                '<label>Jenis Laporan</label>' +
+                '<select id="repType">' +
+                  '<option>HARIAN</option>' +
+                  '<option>MINGGUAN</option>' +
+                  '<option>BULANAN</option>' +
+                  '<option>AKHIR MAGANG</option>' +
+                '</select>' +
+              '</div>' +
+              fieldInput('repTitle','Judul Laporan','text','') +
+              fieldTextarea('repContent','Isi Laporan') +
+              fieldTextarea('repAchievement','Capaian') +
+              fieldTextarea('repObstacle','Kendala') +
+              fieldTextarea('repSolution','Solusi') +
+              fieldTextarea('repLearning','Pembelajaran') +
+              '<button class="btn block" type="submit">Kirim Laporan</button>' +
+            '</form>' +
+          '</div>';
+      }
+
+      return '' +
+        mobileHeader() +
+        '<div class="grid grid-2">' +
+          form +
+          '<div class="card" style="' + (canCreate ? '' : 'grid-column:1/-1') + '">' +
+            '<h3>Daftar Laporan</h3>' +
+            '<div class="list">' + reportsListHtml() + '</div>' +
+          '</div>' +
+        '</div>';
     }
 
     function tasksView(){
       const role = String(state.user.role || '').toUpperCase();
       const canCreate = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role);
 
-      return `
-        ${mobileHeader()}
-        ${canCreate ? `
-          <div class="card" style="margin-bottom:18px">
-            <h3>Buat Tugas Mentor</h3>
-            <form id="taskForm" class="grid grid-2" novalidate>
-              <div class="field">
-                <label>Intern</label>
-                <select id="taskIntern">${internOptionsHtml()}</select>
-              </div>
-              <div class="field">
-                <label>Prioritas</label>
-                <select id="taskPriority">
-                  <option>RENDAH</option>
-                  <option selected>SEDANG</option>
-                  <option>TINGGI</option>
-                  <option>MENDESAK</option>
-                </select>
-              </div>
-              ${fieldInput('taskDueDate','Tanggal Tenggat','date')}
-              ${fieldInput('taskDueTime','Waktu Tenggat','time')}
-              <div class="field" style="grid-column:1/-1">
-                <label>Judul Tugas</label>
-                <input id="taskTitle">
-              </div>
-              <div class="field" style="grid-column:1/-1">
-                <label>Deskripsi Tugas</label>
-                <textarea id="taskDescription"></textarea>
-              </div>
-              <div style="grid-column:1/-1">
-                <button class="btn" type="submit">Buat Tugas</button>
-              </div>
-            </form>
-          </div>
-        ` : ''}
+      let form = '';
 
-        <div class="card">
-          <h3>Daftar Tugas</h3>
-          <div class="list">${tasksListHtml()}</div>
-        </div>
-      `;
+      if(canCreate){
+        form = '' +
+          '<div class="card" style="margin-bottom:18px">' +
+            '<h3>Buat Tugas Mentor</h3>' +
+            '<form id="taskForm" class="grid grid-2" novalidate>' +
+              '<div class="field">' +
+                '<label>Intern</label>' +
+                '<select id="taskIntern">' + internOptionsHtml() + '</select>' +
+              '</div>' +
+              '<div class="field">' +
+                '<label>Prioritas</label>' +
+                '<select id="taskPriority">' +
+                  '<option>RENDAH</option>' +
+                  '<option selected>SEDANG</option>' +
+                  '<option>TINGGI</option>' +
+                  '<option>MENDESAK</option>' +
+                '</select>' +
+              '</div>' +
+              fieldInput('taskDueDate','Tanggal Tenggat','date') +
+              fieldInput('taskDueTime','Waktu Tenggat','time') +
+              '<div class="field" style="grid-column:1/-1">' +
+                '<label>Judul Tugas</label>' +
+                '<input id="taskTitle">' +
+              '</div>' +
+              '<div class="field" style="grid-column:1/-1">' +
+                '<label>Deskripsi Tugas</label>' +
+                '<textarea id="taskDescription"></textarea>' +
+              '</div>' +
+              '<div style="grid-column:1/-1">' +
+                '<button class="btn" type="submit">Buat Tugas</button>' +
+              '</div>' +
+            '</form>' +
+          '</div>';
+      }
+
+      return '' +
+        mobileHeader() +
+        form +
+        '<div class="card">' +
+          '<h3>Daftar Tugas</h3>' +
+          '<div class="list">' + tasksListHtml() + '</div>' +
+        '</div>';
     }
 
     function kpiView(){
       const kpi = state.data.kpi || [];
       const progressRows = state.data.kpiProgress || [];
 
-      return `
-        ${mobileHeader()}
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Master KPI</h3>
-            <div class="list">
-              ${kpi.length ? kpi.map(function(row){
-                return `
-                  <div class="item">
-                    <span class="badge green">${esc(row['Status KPI'] || '-')}</span>
-                    <h4>${esc(row['Nama KPI'])}</h4>
-                    <p>${esc(row['Deskripsi KPI'])}</p>
-                    <p>Kategori: ${esc(row['Kategori KPI'])} • Target: ${esc(row['Target Nilai'])} • Bobot: ${esc(row['Bobot Persen'])}</p>
-                  </div>
-                `;
-              }).join('') : emptyHtml('Belum ada KPI.')}
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Progres KPI</h3>
-            <div class="list">
-              ${progressRows.length ? progressRows.map(function(row){
-                return `
-                  <div class="item">
-                    <span class="badge blue">${esc(row['Status Progres'] || '-')}</span>
-                    <h4>${esc(row['ID KPI'])}</h4>
-                    <p>Nilai: ${esc(row['Nilai Saat Ini'])} • Progres: ${esc(row['Persentase Progres'])}</p>
-                    <p>${esc(row['Catatan Intern'] || '')}</p>
-                  </div>
-                `;
-              }).join('') : emptyHtml('Belum ada progres KPI.')}
-            </div>
-          </div>
-        </div>
-      `;
+      return '' +
+        mobileHeader() +
+        '<div class="grid grid-2">' +
+          '<div class="card">' +
+            '<h3>Master KPI</h3>' +
+            '<div class="list">' +
+              (kpi.length ? kpi.map(function(row){
+                return '' +
+                  '<div class="item">' +
+                    '<span class="badge green">' + esc(row['Status KPI'] || '-') + '</span>' +
+                    '<h4>' + esc(row['Nama KPI']) + '</h4>' +
+                    '<p>' + esc(row['Deskripsi KPI']) + '</p>' +
+                    '<p>Kategori: ' + esc(row['Kategori KPI']) + ' • Target: ' + esc(row['Target Nilai']) + ' • Bobot: ' + esc(row['Bobot Persen']) + '</p>' +
+                  '</div>';
+              }).join('') : emptyHtml('Belum ada KPI.')) +
+            '</div>' +
+          '</div>' +
+          '<div class="card">' +
+            '<h3>Progres KPI</h3>' +
+            '<div class="list">' +
+              (progressRows.length ? progressRows.map(function(row){
+                return '' +
+                  '<div class="item">' +
+                    '<span class="badge blue">' + esc(row['Status Progres'] || '-') + '</span>' +
+                    '<h4>' + esc(row['ID KPI']) + '</h4>' +
+                    '<p>Nilai: ' + esc(row['Nilai Saat Ini']) + ' • Progres: ' + esc(row['Persentase Progres']) + '</p>' +
+                    '<p>' + esc(row['Catatan Intern'] || '') + '</p>' +
+                  '</div>';
+              }).join('') : emptyHtml('Belum ada progres KPI.')) +
+            '</div>' +
+          '</div>' +
+        '</div>';
     }
 
     function adminView(){
@@ -2289,167 +2408,160 @@
         return String(user.status || '').toUpperCase() === 'PENDING';
       });
 
-      return `
-        ${mobileHeader()}
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Approval User</h3>
-            <div class="list">
-              ${pending.length ? pending.map(function(user){
-                return `
-                  <div class="item">
-                    <span class="badge amber">${esc(user.status)}</span>
-                    <h4>${esc(user.name)}</h4>
-                    <p>${esc(user.email)} • ${esc(user.role)}</p>
-                    <div class="actions">
-                      <button class="btn green small" type="button" data-action="admin-approve-user" data-email="${escAttrpe="button" data-action="admin-approve-user" data-email="${escAttrtton" data-action="v>
-                  </div>
-                `;
-              }).join('') : emptyHtml('Tidak ada user pending.')}
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Semua User</h3>
-            <div class="table-wrap">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Peran</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${users.map(function(user){
-                    return `
-                      <tr>
-                        <td>${esc(user.name)}</td>
-                        <td>${esc(user.email)}</td>
-                        <td><span class="badge navy">${esc(user.role)}</span></td>
-                        <td><span class="badge ${statusClass(user.status)}">${esc(user.status)}</span></td>
-                      </tr>
-                    `;
-                  }).join('')}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      `;
+      return '' +
+        mobileHeader() +
+        '<div class="grid grid-2">' +
+          '<div class="card">' +
+            '<h3>Approval User</h3>' +
+            '<div class="list">' +
+              (pending.length ? pending.map(function(user){
+                return '' +
+                  '<div class="item">' +
+                    '<span class="badge amber">' + esc(user.status) + '</span>' +
+                    '<h4>' + esc(user.name) + '</h4>' +
+                    '<p>' + esc(user.email) + ' • ' + esc(user.role) + '</p>' +
+                    '<div class="actions">' +
+                      'admin-approve-userApprove Intern</button>' +
+                      '<button class="btn outline small" type="button" data-action="admin-approvereject-userReject</button>' +
+                    '</div>' +
+                  '</div>';
+              }).join('') : emptyHtml('Tidak ada user pending.')) +
+            '</div>' +
+          '</div>' +
+          '<div class="card">' +
+            '<h3>Semua User</h3>' +
+            '<div class="table-wrap">' +
+              '<table class="table">' +
+                '<thead>' +
+                  '<tr>' +
+                    '<th>Nama</th>' +
+                    '<th>Email</th>' +
+                    '<th>Peran</th>' +
+                    '<th>Status</th>' +
+                  '</tr>' +
+                '</thead>' +
+                '<tbody>' +
+                  users.map(function(user){
+                    return '' +
+                      '<tr>' +
+                        '<td>' + esc(user.name) + '</td>' +
+                        '<td>' + esc(user.email) + '</td>' +
+                        '<td><span class="badge navy">' + esc(user.role) + '</span></td>' +
+                        '<td><span class="badge ' + statusClass(user.status) + '">' + esc(user.status) + '</span></td>' +
+                      '</tr>';
+                  }).join('') +
+                '</tbody>' +
+              '</table>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
     }
 
     function notificationsView(){
       const list = state.data.notifications || [];
 
-      return `
-        ${mobileHeader()}
-        <div class="card">
-          <h3>Notifikasi</h3>
-          <div class="list">
-            ${list.length ? list.map(function(n){
-              return `
-                <div class="item">
-                  <span class="badge blue">${esc(n['Jenis Notifikasi'] || 'SISTEM')}</span>
-                  <h4>${esc(n['Judul Notifikasi'])}</h4>
-                  <p>${esc(n['Isi Notifikasi'])}</p>
-                  <p>${esc(n['Dibuat Pada'])}</p>
-                </div>
-              `;
-            }).join('') : emptyHtml('Belum ada notifikasi.')}
-          </div>
-        </div>
-      `;
+      return '' +
+        mobileHeader() +
+        '<div class="card">' +
+          '<h3>Notifikasi</h3>' +
+          '<div class="list">' +
+            (list.length ? list.map(function(row){
+              return '' +
+                '<div class="item">' +
+                  '<span class="badge blue">' + esc(row['Jenis Notifikasi'] || 'SISTEM') + '</span>' +
+                  '<h4>' + esc(row['Judul Notifikasi']) + '</h4>' +
+                  '<p>' + esc(row['Isi Notifikasi']) + '</p>' +
+                  '<p>' + esc(row['Dibuat Pada']) + '</p>' +
+                '</div>';
+            }).join('') : emptyHtml('Belum ada notifikasi.')) +
+          '</div>' +
+        '</div>';
     }
 
     function guideView(){
-      return `
-        ${mobileHeader()}
-        <div class="card">
-          <h3>Panduan Penggunaan InTrack</h3>
-          <p>Panduan ini dapat dibaca langsung dan diunduh oleh pengguna.</p>
-          <div class="actions">
-            download-guide-txtDownload TXT</button>
-            <button class="btn outline" type="button" data-action="nstall-appInstall Aplikasi</button>
-            <button class="btn light" type="button" data-action="fullscreenlass="guide-box" style="margin-top:16px">${esc(getGuideText())}</div>
-        </div>
-      `;
+      return '' +
+        mobileHeader() +
+        '<div class="card">' +
+          '<h3>Panduan Penggunaan InTrack</h3>' +
+          '<p>Panduan ini dapat dibaca langsung dan diunduh oleh pengguna.</p>' +
+          '<div class="actions">' +
+            'download-guide-txtDownload TXT</button>' +
+            'download-guide-wordDownload Word</button>' +
+            '<button class="btn navy" type="button" data-action="install-appFullscreen</button>' +
+          '</div>' +
+          '<div class="guide-box" style="margin-top:16px">' + esc(getGuideText()) + '</div>' +
+        '</div>';
     }
 
     function profileView(){
       const user = state.user;
 
-      return `
-        ${mobileHeader()}
-        <div class="profile-shell">
-          <div class="card profile-main">
-            <div class="profile-photo">${initials(user.name)}</div>
-            <h3>${esc(user.name)}</h3>
-            <p>${esc(user.email)}</p>
-            <span class="badge navy">${esc(user.role)}</span>
-            <span class="badge ${statusClass(user.status)}">${esc(user.status)}</span>
-            <div class="actions" style="justify-content:center">
-              <button-appInstall</button>
-              fullscreenFullscreen</button>
-              <button class="btn red" type="button" data-action="logout
-
-          <div class="card">
-            <h3>Detail Akun</h3>
-            <div class="grid grid-2">
-              ${meta('ID Pengguna', user.id)}
-              ${meta('Nama Lengkap', user.name)}
-              ${meta('Email', user.email)}
-              ${meta('Nomor Telepon', user.phone || '-')}
-              ${meta('Penyedia Login', user.provider || '-')}
-              ${meta('Peran', user.role)}
-              ${meta('Status Akun', user.status)}
-              ${meta('Login Terakhir', user.lastLogin || '-')}
-            </div>
-          </div>
-        </div>
-      `;
+      return '' +
+        mobileHeader() +
+        '<div class="profile-shell">' +
+          '<div class="card profile-main">' +
+            '<div class="profile-photo">' + initials(user.name) + '</div>' +
+            '<h3>' + esc(user.name) + '</h3>' +
+            '<p>' + esc(user.email) + '</p>' +
+            '<span class="badge navy">' + esc(user.role) + '</span> ' +
+            '<span class="badge ' + statusClass(user.status) + '">' + esc(user.status) + '</span>' +
+            '<div class="actions" style="justify-content:center">' +
+              'install-appInstall</button>' +
+              'fullscreenFullscreen</button>' +
+              'logoutKeluar</button>' +
+            '</div>' +
+          '</div>' +
+          '<div class="card">' +
+            '<h3>Detail Akun</h3>' +
+            '<div class="grid grid-2">' +
+              meta('ID Pengguna', user.id) +
+              meta('Nama Lengkap', user.name) +
+              meta('Email', user.email) +
+              meta('Nomor Telepon', user.phone || '-') +
+              meta('Penyedia Login', user.provider || '-') +
+              meta('Peran', user.role) +
+              meta('Status Akun', user.status) +
+              meta('Login Terakhir', user.lastLogin || '-') +
+            '</div>' +
+          '</div>' +
+        '</div>';
     }
 
     function fieldInput(id,label,type,placeholder){
-      return `
-        <div class="field">
-          <label>${esc(label)}</label>
-          <input id="${escAttr(id)}" type="${escAttr(type || 'text')}" placeholder="${escAttr(placeholder || '')}">
-        </div>
-      `;
+      return '' +
+        '<div class="field">' +
+          '<label>' + esc(label) + '</label>' +
+          '<input id="' + escAttr(id) + '" type="' + escAttr(type || 'text') + '" placeholder="' + escAttr(placeholder || '') + '">' +
+        '</div>';
     }
 
     function fieldTextarea(id,label){
-      return `
-        <div class="field">
-          <label>${esc(label)}</label>
-          <textarea id="${escAttr(id)}"></textarea>
-        </div>
-      `;
+      return '' +
+        '<div class="field">' +
+          '<label>' + esc(label) + '</label>' +
+          '<textarea id="' + escAttr(id) + '"></textarea>' +
+        '</div>';
     }
 
     function stat(icon,value,title,desc){
-      return `
-        <div class="card stat-card">
-          <div class="stat-icon i-blue">${icon}</div>
-          <strong>${esc(value)}</strong>
-          <span>${esc(title)}</span>
-          <p>${esc(desc)}</p>
-        </div>
-      `;
+      return '' +
+        '<div class="card stat-card">' +
+          '<div class="stat-icon i-blue">' + icon + '</div>' +
+          '<strong>' + esc(value) + '</strong>' +
+          '<span>' + esc(title) + '</span>' +
+          '<p>' + esc(desc) + '</p>' +
+        '</div>';
     }
 
     function progress(percent,label){
-      return `
-        <div class="progress">
-          <div class="progress-meta">
-            <span>${esc(label)}</span>
-            <span>${percent}%</span>
-          </div>
-          <div class="bar"><span style="width:${percent}%"></span></div>
-        </div>
-      `;
+      return '' +
+        '<div class="progress">' +
+          '<div class="progress-meta">' +
+            '<span>' + esc(label) + '</span>' +
+            '<span>' + percent + '%</span>' +
+          '</div>' +
+          '<div class="bar"><span style="width:' + percent + '%"></span></div>' +
+        '</div>';
     }
 
     function latestReportsHtml(){
@@ -2469,17 +2581,17 @@
       if(!rows.length) return emptyHtml('Belum ada presensi.');
 
       return rows.map(function(row){
-        return `
-          <div class="item">
-            <span class="badge blue">${esc(row['Status Kehadiran'] || '-')}</span>
-            <h4>${esc(row['Tanggal Presensi'])}</h4>
-            <p>Masuk: ${esc(row['Waktu Masuk'] || '-')} • Pulang: ${esc(row['Waktu Pulang'] || '-')}</p>
-            <p>Status: ${esc(row['Status Verifikasi'] || '-')}</p>
-            <div class="actions">
-              ${row['Foto Masuk'] ? `<a class="btn outline small" href="${escAttr(row  ${row['Foto Pulang'] ? `<a class="btn outline smalla>` : ''}
-            </div>
-          </div>
-        `;
+        return '' +
+          '<div class="item">' +
+            '<span class="badge blue">' + esc(row['Status Kehadiran'] || '-') + '</span>' +
+            '<h4>' + esc(row['Tanggal Presensi']) + '</h4>' +
+            '<p>Masuk: ' + esc(row['Waktu Masuk'] || '-') + ' • Pulang: ' + esc(row['Waktu Pulang'] || '-') + '</p>' +
+            '<p>Status: ' + esc(row['Status Verifikasi'] || '-') + '</p>' +
+            '<div class="actions">' +
+              (row['Foto Masuk'] ? '<a class="btn outline small" href="' + escAttr(row['Foto Masuk']) + '" target="_blank">Foto Masuk</a>' : '') +
+              (row['Foto Pulang'] ? '<a class="btn outline small" href="' + escAttr(row['Foto Pulang']) + '" target="_blank">Foto Pulang</a>' : '') +
+            '</div>' +
+          '</div>';
       }).join('');
     }
 
@@ -2488,14 +2600,13 @@
       if(!rows.length) return emptyHtml('Belum ada aktivitas.');
 
       return rows.map(function(row){
-        return `
-          <div class="item">
-            <span class="badge ${statusClass(row['Status Aktivitas'])}">${esc(row['Status Aktivitas'] || '-')}</span>
-            <h4>${esc(row['Judul Aktivitas'])}</h4>
-            <p>${esc(row['Deskripsi Aktivitas'])}</p>
-            <p>${esc(row['Tanggal Aktivitas'])} • ${esc(row['Kategori Aktivitas'])} • ${esc(row['Durasi Jam'])} jam</p>
-          </div>
-        `;
+        return '' +
+          '<div class="item">' +
+            '<span class="badge ' + statusClass(row['Status Aktivitas']) + '">' + esc(row['Status Aktivitas'] || '-') + '</span>' +
+            '<h4>' + esc(row['Judul Aktivitas']) + '</h4>' +
+            '<p>' + esc(row['Deskripsi Aktivitas']) + '</p>' +
+            '<p>' + esc(row['Tanggal Aktivitas']) + ' • ' + esc(row['Kategori Aktivitas']) + ' • ' + esc(row['Durasi Jam']) + ' jam</p>' +
+          '</div>';
       }).join('');
     }
 
@@ -2510,16 +2621,18 @@
       const canApprove = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role) && String(row['Status Laporan']).toUpperCase() !== 'DISETUJUI';
       const canRequestEdit = role === 'INTERN';
 
-      return `
-        <div class="item">
-          <span class="badge ${statusClass(row['Status Laporan'])}">${esc(row['Status Laporan'] || '-')}</span>
-          <h4>${esc(row['Judul Laporan'])}</h4>
-          <p>${esc(row['Isi Laporan'])}</p>
-          <p>${esc(row['Tanggal Laporan'])} • ${esc(row['Jenis Laporan'])}</p>
-          <div class="actions">
-            ${canRequestEdit ? `<button class="btn outline small" type="button" data-action="open-request-edit" data-id="${escAttr(row['ID: ''}
-            ${row['URL Dokumen PDF'] ? `<a class="btn small" href="${escAttr(row['URL Dokumen      </div>
-      `;
+      return '' +
+        '<div class="item">' +
+          '<span class="badge ' + statusClass(row['Status Laporan']) + '">' + esc(row['Status Laporan'] || '-') + '</span>' +
+          '<h4>' + esc(row['Judul Laporan']) + '</h4>' +
+          '<p>' + esc(row['Isi Laporan']) + '</p>' +
+          '<p>' + esc(row['Tanggal Laporan']) + ' • ' + esc(row['Jenis Laporan']) + '</p>' +
+          '<div class="actions">' +
+            (canRequestEdit ? 'open-request-editRequest Edit</button>' : '') +
+            (canApprove ? 'approve-reportApprove</button>' : '') +
+            (row['URL Dokumen PDF'] ? '<a class="btn small" href="' + escAttr(row['URL Dokumen PDF']) + '" target="_blank">Buka PDF</a>' : '') +
+          '</div>' +
+        '</div>';
     }
 
     function tasksListHtml(){
@@ -2533,20 +2646,16 @@
       const canSubmit = role === 'INTERN';
       const canReview = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role);
 
-      return `
-        <div class="item">
-          <span class="badge ${statusClass(row['Status Tugas'])}">${esc(row['Status Tugas'] || '-')}</span>
-          <h4>${esc(row['Judul Tugas'])}</h4>
-          <p>${esc(row['Deskripsi Tugas'])}</p>
-          <p>Intern: ${esc(row['Nama Intern'])} • Mentor: ${esc(row['Nama Mentor'])}</p>
-          ${row['Hasil Pengerjaan'] ? `<p>Hasil: ${esc(row['Hasil Pengerjaan'])}</p>` : ''}
-          <div class="actions">
-            ${canSubmit ? `<button class="btnbmit</button>` : ''}
-            ${canReview ? `<button class="btn green small" type="button" data-action       </div>
-      `;
-    }
-
-    function internOptionsHtml(){
+      return '' +
+        '<div class="item">' +
+          '<span class="badge ' + statusClass(row['Status Tugas']) + '">' + esc(row['Status Tugas'] || '-') + '</span>' +
+          '<h4>' + esc(row['Judul Tugas']) + '</h4>' +
+          '<p>' + esc(row['Deskripsi Tugas']) + '</p>' +
+          '<p>Intern: ' + esc(row['Nama Intern']) + ' • Mentor: ' + esc(row['Nama Mentor']) + '</p>' +
+          (row['Hasil Pengerjaan'] ? '<p>Hasil: ' + esc(row['Hasil Pengerjaan']) + '</p>' : '') +
+          '<div class="actions">' +
+            (canSubmit ? 'open-submit-taskSubmit</button>' : '') +
+            (canReview ? '<button class="btn green small" type="button" data-action="open-review-task" data-id="' + escAttr(row['ID Tugas']) + '){
       const users = state.data.users || [];
       const interns = users.filter(function(user){
         return String(user.role || '').toUpperCase() === 'INTERN' &&
@@ -2556,21 +2665,20 @@
       if(!interns.length) return '<option value="">Belum ada intern aktif</option>';
 
       return interns.map(function(user){
-        return `<option value="${escAttr(user.email)}">${esc(user.name)} — ${esc(user.email)}</option>`;
+        return '<option value="' + escAttr(user.email) + '">' + esc(user.name) + ' — ' + esc(user.email) + '</option>';
       }).join('');
     }
 
     function meta(label,value){
-      return `
-        <div class="meta-item">
-          <span>${esc(label)}</span>
-          <strong>${esc(value || '-')}</strong>
-        </div>
-      `;
+      return '' +
+        '<div class="meta-item">' +
+          '<span>' + esc(label) + '</span>' +
+          '<strong>' + esc(value || '-') + '</strong>' +
+        '</div>';
     }
 
     function emptyHtml(text){
-      return `<div class="empty">${esc(text)}</div>`;
+      return '<div class="empty">' + esc(text) + '</div>';
     }
 
     async function startCamera(){
@@ -2591,20 +2699,23 @@
         const box = document.getElementById('cameraBox');
         if(!box) return;
 
-        box.innerHTML = `
-          <video id="cameraVideo" autoplay playsinline muted></video>
-          <div class="camera-caption">Kamera aktif. Tekan Capture untuk mengambil foto.</div>
-        `;
+        box.innerHTML = '' +
+          '<video id="cameraVideo" autoplay playsinline muted></video>' +
+          '<div class="camera-caption">Kamera aktif. Tekan Capture untuk mengambil foto.</div>';
 
         document.getElementById('cameraVideo').srcObject = stream;
-      }catch(err){
-        showModal('Kamera Gagal','Pastikan browser memiliki izin kamera dan aplikasi dibuka melalui HTTPS.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+      }catch(error){
+        showModal('Kamera Gagal','Pastikan browser memiliki izin kamera dan aplikasi dibuka melalui HTTPS.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       }
     }
 
     function stopCamera(){
       if(state.stream){
-        state.stream.getTracks().forEach(function(track){ track.stop(); });
+        state.stream.getTracks().forEach(function(track){
+          track.stop();
+        });
         state.stream = null;
       }
     }
@@ -2613,7 +2724,9 @@
       const video = document.getElementById('cameraVideo');
 
       if(!video){
-        showModal('Kamera Belum Aktif','Aktifkan kamera terlebih dahulu.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Kamera Belum Aktif','Aktifkan kamera terlebih dahulu.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
         return;
       }
 
@@ -2631,7 +2744,7 @@
       state.photoBase64 = canvas.toDataURL('image/jpeg', .82);
 
       const preview = document.getElementById('photoPreview');
-      if(preview) preview.innerHTML = `<{state.photoBase64}`;
+      if(preview) preview.innerHTML = '<img src="' + state.photoBase64 + '" alt="Foto presensi">';
     }
 
     function drawWatermark(ctx,w,h){
@@ -2677,20 +2790,26 @@
 
     function getGps(){
       if(!navigator.geolocation){
-        showModal('GPS Tidak Didukung','Browser tidak mendukung geolocation.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('GPS Tidak Didukung','Browser tidak mendukung geolocation.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
         return;
       }
 
-      navigator.geolocation.getCurrentPosition(function(pos){
-        state.gps.latitude = pos.coords.latitude;
-        state.gps.longitude = pos.coords.longitude;
+      navigator.geolocation.getCurrentPosition(function(position){
+        state.gps.latitude = position.coords.latitude;
+        state.gps.longitude = position.coords.longitude;
 
         const info = document.getElementById('gpsInfo');
         if(info) info.textContent = 'GPS: ' + state.gps.latitude + ', ' + state.gps.longitude;
 
-        showModal('GPS Tersimpan','Koordinat berhasil diambil.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('GPS Tersimpan','Koordinat berhasil diambil.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       }, function(){
-        showModal('GPS Gagal','Izin lokasi ditolak atau lokasi tidak tersedia.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('GPS Gagal','Izin lokasi ditolak atau lokasi tidak tersedia.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       }, {
         enableHighAccuracy:true,
         timeout:10000,
@@ -2700,7 +2819,9 @@
 
     function saveAttendance(){
       if(!state.photoBase64){
-        showModal('Foto Kosong','Ambil foto presensi terlebih dahulu.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Foto Kosong','Ambil foto presensi terlebih dahulu.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
         return;
       }
 
@@ -2716,7 +2837,9 @@
         state.data = data;
         state.photoBase64 = '';
         route('attendance');
-        showModal('Berhasil','Presensi tersimpan.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Berhasil','Presensi tersimpan.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       });
     }
 
@@ -2734,7 +2857,9 @@
       }, function(data){
         state.data = data;
         route('activities');
-        showModal('Berhasil','Aktivitas harian tersimpan.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Berhasil','Aktivitas harian tersimpan.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       });
     }
 
@@ -2752,7 +2877,9 @@
       }, function(data){
         state.data = data;
         route('reports');
-        showModal('Berhasil','Laporan kerja terkirim.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Berhasil','Laporan kerja terkirim.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       });
     }
 
@@ -2768,7 +2895,9 @@
       }, function(data){
         state.data = data;
         route('tasks');
-        showModal('Berhasil','Tugas mentor dibuat.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Berhasil','Tugas mentor dibuat.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       });
     }
 
@@ -2776,70 +2905,78 @@
       state.pendingModalAction = function(){
         callApi('REQUEST_EDIT_REPORT', {
           sessionToken:state.sessionToken,
-          reportId,
+          reportId:reportId,
           reason:val('modalReason'),
           section:val('modalSection')
         }, function(data){
           state.data = data;
           closeModal();
           route('reports');
-          showModal('Berhasil','Permintaan edit laporan terkirim.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+          showModal('Berhasil','Permintaan edit laporan terkirim.','',[
+            { label:'Tutup', className:'light', action:'close-modal' }
+          ]);
         });
       };
 
-      showModal('Request Edit Laporan','Isi alasan permintaan edit.', `
-        <div class="field">
-          <label>Bagian yang Diedit</label>
-          <select id="modalSection">
-            <option>JUDUL</option>
-            <option>ISI LAPORAN</option>
-            <option>CAPAIAN</option>
-            <option>KENDALA</option>
-            <option>SOLUSI</option>
-            <option>LAMPIRAN</option>
-            <option>LAINNYA</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Alasan Edit</label>
-          <textarea id="modalReason"></textarea>
-        </div>
-      `, [
-        { label:'Kirim', className:'navy', action:'confirm-modal-action' },
-        { label:'Batal', className:'light', action:'close-modal' }
-      ], true);
+      showModal('Request Edit Laporan','Isi alasan permintaan edit.',
+        '<div class="field">' +
+          '<label>Bagian yang Diedit</label>' +
+          '<select id="modalSection">' +
+            '<option>JUDUL</option>' +
+            '<option>ISI LAPORAN</option>' +
+            '<option>CAPAIAN</option>' +
+            '<option>KENDALA</option>' +
+            '<option>SOLUSI</option>' +
+            '<option>LAMPIRAN</option>' +
+            '<option>LAINNYA</option>' +
+          '</select>' +
+        '</div>' +
+        '<div class="field">' +
+          '<label>Alasan Edit</label>' +
+          '<textarea id="modalReason"></textarea>' +
+        '</div>',
+        [
+          { label:'Kirim', className:'navy', action:'confirm-modal-action' },
+          { label:'Batal', className:'light', action:'close-modal' }
+        ],
+        true
+      );
     }
 
     function openSubmitTaskModal(taskId){
       state.pendingModalAction = function(){
         callApi('SUBMIT_TASK', {
           sessionToken:state.sessionToken,
-          taskId,
+          taskId:taskId,
           result:val('modalTaskResult')
         }, function(data){
           state.data = data;
           closeModal();
           route('tasks');
-          showModal('Berhasil','Hasil tugas terkirim.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+          showModal('Berhasil','Hasil tugas terkirim.','',[
+            { label:'Tutup', className:'light', action:'close-modal' }
+          ]);
         });
       };
 
-      showModal('Submit Tugas','Isi hasil pengerjaan tugas.', `
-        <div class="field">
-          <label>Hasil Pengerjaan</label>
-          <textarea id="modalTaskResult"></textarea>
-        </div>
-      `, [
-        { label:'Kirim', className:'navy', action:'confirm-modal-action' },
-        { label:'Batal', className:'light', action:'close-modal' }
-      ], true);
+      showModal('Submit Tugas','Isi hasil pengerjaan tugas.',
+        '<div class="field">' +
+          '<label>Hasil Pengerjaan</label>' +
+          '<textarea id="modalTaskResult"></textarea>' +
+        '</div>',
+        [
+          { label:'Kirim', className:'navy', action:'confirm-modal-action' },
+          { label:'Batal', className:'light', action:'close-modal' }
+        ],
+        true
+      );
     }
 
     function openReviewTaskModal(taskId){
       state.pendingModalAction = function(){
         callApi('REVIEW_TASK', {
           sessionToken:state.sessionToken,
-          taskId,
+          taskId:taskId,
           status:val('modalTaskStatus'),
           note:val('modalTaskNote'),
           score:val('modalTaskScore')
@@ -2847,69 +2984,79 @@
           state.data = data;
           closeModal();
           route('tasks');
-          showModal('Berhasil','Review tugas tersimpan.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+          showModal('Berhasil','Review tugas tersimpan.','',[
+            { label:'Tutup', className:'light', action:'close-modal' }
+          ]);
         });
       };
 
-      showModal('Review Tugas','Tentukan status review tugas.', `
-        <div class="field">
-          <label>Status</label>
-          <select id="modalTaskStatus">
-            <option value="DISETUJUI">Disetujui</option>
-            <option value="REVISI">Revisi</option>
-            <option value="DIREVIEW">Direview</option>
-            <option value="DIBATALKAN">Dibatalkan</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Nilai</label>
-          <input id="modalTaskScore" type="number" min="0" max="100">
-        </div>
-        <div class="field">
-          <label>Catatan Mentor</label>
-          <textarea id="modalTaskNote"></textarea>
-        </div>
-      `, [
-        { label:'Simpan', className:'navy', action:'confirm-modal-action' },
-        { label:'Batal', className:'light', action:'close-modal' }
-      ], true);
+      showModal('Review Tugas','Tentukan status review tugas.',
+        '<div class="field">' +
+          '<label>Status</label>' +
+          '<select id="modalTaskStatus">' +
+            '<option value="DISETUJUI">Disetujui</option>' +
+            '<option value="REVISI">Revisi</option>' +
+            '<option value="DIREVIEW">Direview</option>' +
+            '<option value="DIBATALKAN">Dibatalkan</option>' +
+          '</select>' +
+        '</div>' +
+        '<div class="field">' +
+          '<label>Nilai</label>' +
+          '<input id="modalTaskScore" type="number" min="0" max="100">' +
+        '</div>' +
+        '<div class="field">' +
+          '<label>Catatan Mentor</label>' +
+          '<textarea id="modalTaskNote"></textarea>' +
+        '</div>',
+        [
+          { label:'Simpan', className:'navy', action:'confirm-modal-action' },
+          { label:'Batal', className:'light', action:'close-modal' }
+        ],
+        true
+      );
     }
 
     function approveReport(reportId){
       state.pendingModalAction = function(){
         callApi('APPROVE_WORK_REPORT', {
           sessionToken:state.sessionToken,
-          reportId,
+          reportId:reportId,
           reviewNote:val('modalReviewNote')
         }, function(data){
           state.data = data;
           closeModal();
           route('reports');
-          showModal('Berhasil','Laporan disetujui dan PDF diproses.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+          showModal('Berhasil','Laporan disetujui dan PDF diproses.','',[
+            { label:'Tutup', className:'light', action:'close-modal' }
+          ]);
         });
       };
 
-      showModal('Approve Laporan','Tambahkan catatan review bila diperlukan.', `
-        <div class="field">
-          <label>Catatan Review</label>
-          <textarea id="modalReviewNote">Disetujui.</textarea>
-        </div>
-      `, [
-        { label:'Approve', className:'green', action:'confirm-modal-action' },
-        { label:'Batal', className:'light', action:'close-modal' }
-      ], true);
+      showModal('Approve Laporan','Tambahkan catatan review bila diperlukan.',
+        '<div class="field">' +
+          '<label>Catatan Review</label>' +
+          '<textarea id="modalReviewNote">Disetujui.</textarea>' +
+        '</div>',
+        [
+          { label:'Approve', className:'green', action:'confirm-modal-action' },
+          { label:'Batal', className:'light', action:'close-modal' }
+        ],
+        true
+      );
     }
 
     function adminUpdateUser(email,status,role){
       callApi('ADMIN_UPDATE_USER', {
         sessionToken:state.sessionToken,
-        email,
-        status,
-        role
+        email:email,
+        status:status,
+        role:role
       }, function(data){
         state.data = data;
         route('admin');
-        showModal('Berhasil','Status user diperbarui.','',[{ label:'Tutup', className:'light', action:'close-modal' }]);
+        showModal('Berhasil','Status user diperbarui.','',[
+          { label:'Tutup', className:'light', action:'close-modal' }
+        ]);
       });
     }
 
@@ -2940,12 +3087,9 @@
         return;
       }
 
-      showModal(
-        'Install Aplikasi',
-        'Jika tombol install browser belum tersedia, gunakan menu browser lalu pilih Add to Home Screen atau Install App.',
-        '',
-        [{ label:'Tutup', className:'light', action:'close-modal' }]
-      );
+      showModal('Install Aplikasi', 'Jika tombol install browser belum tersedia, gunakan menu browser lalu pilih Add to Home Screen atau Install App.', '', [
+        { label:'Tutup', className:'light', action:'close-modal' }
+      ]);
     }
 
     function toggleFullscreen(){
@@ -2971,10 +3115,15 @@
       document.getElementById('modalMessage').textContent = message || '';
       document.getElementById('modalExtra').innerHTML = extra || '';
 
-      const modalActions = actions || [{ label:'Tutup', className:'light', action:'close-modal' }];
+      const modalActions = actions || [
+        { label:'Tutup', className:'light', action:'close-modal' }
+      ];
 
       document.getElementById('modalActions').innerHTML = modalActions.map(function(action){
-        return `<button class="btn ${escAttr(action.className || '')}" type="button" data-action="${escAttr(action.actionow');
+        return '<button class="btn ' + escAttr(action.className || '') + '" type="button" data-action="' + escAttr(action.action) + '">' + esc(action.label) + '</button>';
+      }).join('');
+
+      root.classList.add('show');
     }
 
     function closeModal(){
@@ -3063,7 +3212,9 @@
     }
 
     function downloadGuideTxt(){
-      downloadBlob('Panduan_InTrack.txt', new Blob([getGuideText()], { type:'text/plain;charset=utf-8' }));
+      downloadBlob('Panduan_InTrack.txt', new Blob([getGuideText()], {
+        type:'text/plain;charset=utf-8'
+      }));
     }
 
     function downloadGuideWord(){
@@ -3073,41 +3224,50 @@
         '<pre style="font-family:Arial;white-space:pre-wrap;line-height:1.6">' + esc(getGuideText()) + '</pre>' +
         '</body></html>';
 
-      downloadBlob('Panduan_InTrack.doc', new Blob([html], { type:'application/msword;charset=utf-8' }));
+      downloadBlob('Panduan_InTrack.doc', new Blob([html], {
+        type:'application/msword;charset=utf-8'
+      }));
     }
 
     function downloadBlob(filename,blob){
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
+
       a.href = url;
       a.download = filename;
+
       document.body.appendChild(a);
       a.click();
       a.remove();
-      setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+
+      setTimeout(function(){
+        URL.revokeObjectURL(url);
+      },1000);
     }
 
     function statusClass(status){
-      const s = String(status || '').toUpperCase();
+      const value = String(status || '').toUpperCase();
 
-      if(['ACTIVE','AKTIF','DISETUJUI','VALID','BERHASIL','YA','SELESAI'].includes(s)) return 'green';
-      if(['PENDING','MENUNGGU','DIKIRIM','DIREVIEW','BARU','DIKERJAKAN','MENUNGGU EDIT'].includes(s)) return 'amber';
-      if(['REVISI','PERLU REVISI','TERLAMBAT','MENDESAK'].includes(s)) return 'orange';
-      if(['BLOCKED','REJECTED','DITOLAK','GAGAL','TIDAK VALID'].includes(s)) return 'red';
+      if(['ACTIVE','AKTIF','DISETUJUI','VALID','BERHASIL','YA','SELESAI'].includes(value)) return 'green';
+      if(['PENDING','MENUNGGU','DIKIRIM','DIREVIEW','BARU','DIKERJAKAN','MENUNGGU EDIT'].includes(value)) return 'amber';
+      if(['REVISI','PERLU REVISI','TERLAMBAT','MENDESAK'].includes(value)) return 'orange';
+      if(['BLOCKED','REJECTED','DITOLAK','GAGAL','TIDAK VALID'].includes(value)) return 'red';
 
       return 'blue';
     }
 
     function val(id){
-      const el = document.getElementById(id);
-      return el ? String(el.value || '').trim() : '';
+      const element = document.getElementById(id);
+      return element ? String(element.value || '').trim() : '';
     }
 
     function dateInputToId(value){
       if(!value) return '';
-      const p = value.split('-');
-      if(p.length !== 3) return value;
-      return p[2] + '/' + p[1] + '/' + p[0];
+
+      const parts = value.split('-');
+      if(parts.length !== 3) return value;
+
+      return parts[2] + '/' + parts[1] + '/' + parts[0];
     }
 
     function initials(name){
@@ -3115,7 +3275,9 @@
         .split(' ')
         .filter(Boolean)
         .slice(0,2)
-        .map(function(word){ return word[0]; })
+        .map(function(word){
+          return word[0];
+        })
         .join('')
         .toUpperCase();
     }
