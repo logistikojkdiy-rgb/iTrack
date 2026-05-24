@@ -13,10 +13,6 @@
 
   <title>iTrack</title>
 
-  <link rel="icon" type="image/png" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
-  <link rel="apple-touch-icon" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
-  <link rel="shortcut icon" href="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png">
-
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
@@ -29,7 +25,6 @@
       --red:#DC2626;
       --purple:#7C3AED;
       --gray:#64748B;
-
       --soft-blue:#EFF6FF;
       --soft-green:#DCFCE7;
       --soft-amber:#FEF3C7;
@@ -37,16 +32,13 @@
       --soft-red:#FEE2E2;
       --soft-purple:#F3E8FF;
       --soft-gray:#F1F5F9;
-
       --bg:#F8FAFC;
       --card:#FFFFFF;
       --text:#0F172A;
       --muted:#64748B;
       --line:#E2E8F0;
-
       --shadow:0 22px 70px rgba(15,23,42,.12);
       --shadow2:0 10px 30px rgba(15,23,42,.07);
-
       --side:278px;
       --radius:26px;
     }
@@ -76,8 +68,8 @@
     }
 
     button {
-      cursor:pointer;
       border:0;
+      cursor:pointer;
     }
 
     textarea {
@@ -213,7 +205,7 @@
       display:grid;
       place-items:center;
       background:#fff;
-      transition:opacity .25s ease,visibility .25s ease;
+      transition:opacity .25s ease, visibility .25s ease;
     }
 
     .splash.hide {
@@ -314,12 +306,20 @@
     }
 
     @keyframes spin {
-      to { transform:rotate(360deg); }
+      to {
+        transform:rotate(360deg);
+      }
     }
 
     @keyframes fadeUp {
-      from { opacity:0; transform:translateY(12px); }
-      to { opacity:1; transform:translateY(0); }
+      from {
+        opacity:0;
+        transform:translateY(12px);
+      }
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
     .auth {
@@ -329,7 +329,7 @@
       padding:24px;
       background:
         radial-gradient(circle at top left,rgba(37,99,235,.10),transparent 34%),
-        linear-gradient(180deg,#FFFFFF,#F8FAFC);
+        linear-gradient(180deg,#fff,#F8FAFC);
     }
 
     .auth-shell {
@@ -747,9 +747,17 @@
       gap:18px;
     }
 
-    .grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
-    .grid-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
-    .grid-4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
+    .grid-2 {
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns:repeat(4,minmax(0,1fr));
+    }
 
     .card {
       background:var(--card);
@@ -802,11 +810,30 @@
       margin-bottom:18px;
     }
 
-    .i-blue { background:var(--soft-blue); color:var(--blue); }
-    .i-green { background:var(--soft-green); color:var(--green); }
-    .i-orange { background:var(--soft-orange); color:var(--orange); }
-    .i-purple { background:var(--soft-purple); color:var(--purple); }
-    .i-navy { background:#E0E7FF; color:var(--navy); }
+    .i-blue {
+      background:var(--soft-blue);
+      color:var(--blue);
+    }
+
+    .i-green {
+      background:var(--soft-green);
+      color:var(--green);
+    }
+
+    .i-orange {
+      background:var(--soft-orange);
+      color:var(--orange);
+    }
+
+    .i-purple {
+      background:var(--soft-purple);
+      color:var(--purple);
+    }
+
+    .i-navy {
+      background:#E0E7FF;
+      color:var(--navy);
+    }
 
     .stat-card strong {
       display:block;
@@ -1140,18 +1167,44 @@
     }
 
     @media(max-width:1180px) {
-      .auth-shell { grid-template-columns:1fr; }
-      .hero { min-height:450px; }
-      .grid-4 { grid-template-columns:repeat(2,1fr); }
-      .grid-3 { grid-template-columns:repeat(2,1fr); }
-      .camera-layout { grid-template-columns:1fr; }
+      .auth-shell {
+        grid-template-columns:1fr;
+      }
+
+      .hero {
+        min-height:450px;
+      }
+
+      .grid-4 {
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .camera-layout {
+        grid-template-columns:1fr;
+      }
     }
 
     @media(max-width:980px) {
-      .sidebar { display:none; }
-      .main { margin-left:0; width:100%; }
-      .topbar { display:none; }
-      .content { padding:0 14px 112px; }
+      .sidebar {
+        display:none;
+      }
+
+      .main {
+        margin-left:0;
+        width:100%;
+      }
+
+      .topbar {
+        display:none;
+      }
+
+      .content {
+        padding:0 14px 112px;
+      }
 
       .mobile-header {
         display:block;
@@ -1296,7 +1349,7 @@
   <section id="splash" class="splash">
     <div class="splash-card">
       <div class="splash-logo">
-        <img id="splashLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="iTrack Logo">
+        <img id="splashLogo" class="logo-img large" alt="iTrack Logo">
       </div>
       <h1>iTRACK</h1>
       <p>Memuat aplikasi...</p>
@@ -1325,7 +1378,7 @@
     <div class="auth-shell">
       <aside class="hero">
         <div class="hero-brand">
-          <img id="heroLogo" class="logo-img" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="iTrack Logo">
+          <img id="heroLogo" class="logo-img" alt="iTrack Logo">
           <div>
             <strong>iTrack</strong>
             <span>Internship Tracker</span>
@@ -1355,7 +1408,7 @@
 
       <main class="auth-card">
         <div class="mobile-auth-brand">
-          <img id="mobileLogo" class="logo-img large" src="https://ik.imagekit.io/logojkdiy/InTrack%20(1).png" alt="iTrack Logo">
+          <img id="mobileLogo" class="logo-img large" alt="iTrack Logo">
           <strong>iTrack</strong>
           <span>Internship Tracker</span>
         </div>
@@ -1445,7 +1498,28 @@
         </div>
       </main>
     </div>
-  </btn outline block" type="button" data-action
+  </section>
+
+  <main id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="app-brand">
+        <img id="sidebarLogo" class="logo-img" alt="iTrack Logo">
+        <div>
+          <strong>iTrack</strong>
+          <span>Real Data</span>
+        </div>
+      </div>
+
+      <nav id="sideNav" class="nav"></nav>
+
+      <div class="sidebar-footer">
+        <div class="user-box">
+          <strong id="sideName">User</strong>
+          <span id="sideRole">Role</span>
+        </div>
+        install-appInstall Aplikasi</button>
+        fullscreenFullscreen</button>
+        logoutKeluar</button>
       </div>
     </aside>
 
@@ -1475,14 +1549,13 @@
   <script>
     'use strict';
 
-    const APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/a/macros/pepklms.com/s/AKfycbxXPAv1bmT-jubxF3KDFAmthv3dN01j1shg3RXlyv4cqPcuwviqZZj0PwZK4XiRoYuA/exec';
-    const LOGO_URL = 'https://ik.imagekit.io/logojkdiy/InTrack%20(1).png';
-    const BRIDGE_URL = APPS_SCRIPT_WEB_APP_URL.indexOf('?') >= 0 ? APPS_SCRIPT_WEB_APP_URL + '&page=bridge' : APPS_SCRIPT_WEB_APP_URL + '?page=bridge';
+    var APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/a/macros/pepklms.com/s/AKfycbxXPAv1bmT-jubxF3KDFAmthv3dN01j1shg3RXlyv4cqPcuwviqZZj0PwZK4XiRoYuA/exec';
+    var LOGO_URL = 'https://ik.imagekit.io/logojkdiy/InTrack%20(1).png';
+    var BRIDGE_URL = APPS_SCRIPT_WEB_APP_URL.indexOf('?') >= 0 ? APPS_SCRIPT_WEB_APP_URL + '&page=bridge' : APPS_SCRIPT_WEB_APP_URL + '?page=bridge';
+    var SESSION_KEY = 'ITRACK_SESSION_TOKEN';
+    var USER_KEY = 'ITRACK_SESSION_USER';
 
-    const SESSION_KEY = 'ITRACK_SESSION_TOKEN';
-    const USER_KEY = 'ITRACK_SESSION_USER';
-
-    const MENU = [
+    var MENU = [
       { id:'dashboard', label:'Dashboard', icon:'▦', roles:['SUPER ADMIN','ADMIN','MENTOR','INTERN'] },
       { id:'attendance', label:'Presensi', icon:'📷', roles:['INTERN'] },
       { id:'activities', label:'Aktivitas', icon:'🗓', roles:['INTERN','MENTOR','SUPER ADMIN','ADMIN'] },
@@ -1495,12 +1568,12 @@
       { id:'profile', label:'Profil', icon:'👤', roles:['SUPER ADMIN','ADMIN','MENTOR','INTERN'] }
     ];
 
-    let deferredInstallPrompt = null;
+    var deferredInstallPrompt = null;
 
-    let state = {
+    var state = {
       config:{
         appName:'iTrack',
-        appFullName:'iTrack — Internship Tracker',
+        appFullName:'iTrack - Internship Tracker',
         logoUrl:LOGO_URL
       },
       sessionToken:'',
@@ -1516,7 +1589,7 @@
       pendingModalAction:null
     };
 
-    const iTrackApi = {
+    var iTrackApi = {
       iframe:null,
       ready:false,
       callbacks:{},
@@ -1528,21 +1601,21 @@
             return;
           }
 
-          const iframe = document.getElementById('bridgeFrame');
+          var iframe = document.getElementById('bridgeFrame');
           iframe.src = BRIDGE_URL;
           iTrackApi.iframe = iframe;
 
-          const timeout = setTimeout(function(){
+          var timeout = setTimeout(function(){
             reject({
               success:false,
-              message:'Bridge timeout. Pastikan file Bridge.html sudah dibuat dan deploy Web App sudah diperbarui.'
+              message:'Bridge timeout. Pastikan file Bridge.html sudah dibuat di Apps Script dan Web App sudah di-deploy ulang.'
             });
           },25000);
 
           function readyListener(event){
-            const data = event.data || {};
+            var data = event.data || {};
 
-            if(data.source === 'ITRACK_BRIDGE_READY'){
+            if(data.source === 'ITRACK_BRIDGE_READY' || data.source === 'INTRACK_APPS_SCRIPT_BRIDGE_READY'){
               clearTimeout(timeout);
               window.removeEventListener('message', readyListener);
               iTrackApi.ready = true;
@@ -1556,13 +1629,13 @@
 
       listen:function(){
         window.addEventListener('message',function(event){
-          const data = event.data || {};
+          var data = event.data || {};
 
-          if(data.source !== 'ITRACK_BRIDGE_RESPONSE'){
+          if(data.source !== 'ITRACK_BRIDGE_RESPONSE' && data.source !== 'INTRACK_APPS_SCRIPT_BRIDGE'){
             return;
           }
 
-          const callback = iTrackApi.callbacks[data.requestId];
+          var callback = iTrackApi.callbacks[data.requestId];
 
           if(!callback){
             return;
@@ -1582,33 +1655,40 @@
         });
       },
 
-      call:async function(action,payload){
-        await iTrackApi.init();
+      call:function(action,payload){
+        return iTrackApi.init().then(function(){
+          return new Promise(function(resolve,reject){
+            var requestId = 'REQ-' + Date.now() + '-' + Math.random().toString(16).slice(2);
 
-        return new Promise(function(resolve,reject){
-          const requestId = 'REQ-' + Date.now() + '-' + Math.random().toString(16).slice(2);
+            iTrackApi.callbacks[requestId] = {
+              resolve:resolve,
+              reject:reject
+            };
 
-          iTrackApi.callbacks[requestId] = {
-            resolve:resolve,
-            reject:reject
-          };
+            iTrackApi.iframe.contentWindow.postMessage({
+              source:'ITRACK_FRONTEND',
+              requestId:requestId,
+              action:action,
+              payload:payload || {}
+            }, '*');
 
-          iTrackApi.iframe.contentWindow.postMessage({
-            source:'ITRACK_FRONTEND',
-            requestId:requestId,
-            action:action,
-            payload:payload || {}
-          }, '*');
+            iTrackApi.iframe.contentWindow.postMessage({
+              source:'INTRACK_GITHUB_FRONTEND',
+              requestId:requestId,
+              action:action,
+              payload:payload || {}
+            }, '*');
 
-          setTimeout(function(){
-            if(iTrackApi.callbacks[requestId]){
-              delete iTrackApi.callbacks[requestId];
-              reject({
-                success:false,
-                message:'Request timeout.'
-              });
-            }
-          },60000);
+            setTimeout(function(){
+              if(iTrackApi.callbacks[requestId]){
+                delete iTrackApi.callbacks[requestId];
+                reject({
+                  success:false,
+                  message:'Request timeout.'
+                });
+              }
+            },60000);
+          });
         });
       }
     };
@@ -1637,10 +1717,10 @@
     setupPwaManifest();
 
     function setupPwaManifest(){
-      const scopePath = location.pathname.replace(/\/[^\/]*$/, '/') || '/';
+      var scopePath = location.pathname.replace(/\/[^\/]*$/, '/') || '/';
 
-      const manifest = {
-        name:'iTrack — Internship Tracker',
+      var manifest = {
+        name:'iTrack - Internship Tracker',
         short_name:'iTrack',
         start_url:location.href,
         scope:scopePath,
@@ -1654,26 +1734,36 @@
         ]
       };
 
-      const blob = new Blob([JSON.stringify(manifest)], {
+      var blob = new Blob([JSON.stringify(manifest)], {
         type:'application/json'
       });
 
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('link');
+      var url = URL.createObjectURL(blob);
+      var manifestLink = document.createElement('link');
+      manifestLink.rel = 'manifest';
+      manifestLink.href = url;
+      document.head.appendChild(manifestLink);
 
-      link.rel = 'manifest';
-      link.href = url;
+      var favicon = document.createElement('link');
+      favicon.rel = 'icon';
+      favicon.type = 'image/png';
+      favicon.href = LOGO_URL;
+      document.head.appendChild(favicon);
 
-      document.head.appendChild(link);
+      var apple = document.createElement('link');
+      apple.rel = 'apple-touch-icon';
+      apple.href = LOGO_URL;
+      document.head.appendChild(apple);
     }
 
     function init(){
       setupLogoFallbacks();
+      applyConfig();
 
       state.sessionToken = sessionStorage.getItem(SESSION_KEY) || '';
 
       try{
-        const savedUser = sessionStorage.getItem(USER_KEY);
+        var savedUser = sessionStorage.getItem(USER_KEY);
         state.user = savedUser ? JSON.parse(savedUser) : null;
       }catch(error){
         state.user = null;
@@ -1681,9 +1771,8 @@
 
       callApi('APP_CONFIG', {}, function(config){
         state.config = config || state.config;
-
         state.config.appName = 'iTrack';
-        state.config.appFullName = 'iTrack — Internship Tracker';
+        state.config.appFullName = 'iTrack - Internship Tracker';
         state.config.logoUrl = LOGO_URL;
 
         applyConfig();
@@ -1699,23 +1788,23 @@
     }
 
     function setupLogoFallbacks(){
-      document.querySelectorAll('img.logo-img').forEach(function(img){
-        img.addEventListener('error', function(){
-          const div = document.createElement('div');
+      var images = document.querySelectorAll('img.logo-img');
 
+      images.forEach(function(img){
+        img.addEventListener('error', function(){
+          var div = document.createElement('div');
           div.className = img.classList.contains('large') ? 'logo-fallback large' : 'logo-fallback';
           div.textContent = 'IT';
-
           img.replaceWith(div);
         });
       });
     }
 
     function applyConfig(){
-      const ids = ['splashLogo','heroLogo','mobileLogo','sidebarLogo'];
+      var ids = ['splashLogo','heroLogo','mobileLogo','sidebarLogo'];
 
       ids.forEach(function(id){
-        const img = document.getElementById(id);
+        var img = document.getElementById(id);
 
         if(img){
           img.src = LOGO_URL;
@@ -1726,7 +1815,7 @@
     }
 
     function hideSplash(){
-      const splash = document.getElementById('splash');
+      var splash = document.getElementById('splash');
 
       if(splash){
         splash.classList.add('hide');
@@ -1735,42 +1824,39 @@
 
     function showAuth(){
       hideLoader();
-
       document.getElementById('app').classList.add('hidden');
       document.getElementById('auth').classList.remove('hidden');
-
       hideSplash();
     }
 
     function showApp(){
       document.getElementById('auth').classList.add('hidden');
       document.getElementById('app').classList.remove('hidden');
-
       hideSplash();
     }
 
     function handleClick(event){
-      const tab = event.target.closest('[data-auth-tab]');
+      var tab = event.target.closest('[data-auth-tab]');
 
       if(tab){
         switchAuthTab(tab.dataset.authTab);
         return;
       }
 
-      const routeButton = event.target.closest('[data-page]');
+      var routeButton = event.target.closest('[data-page]');
 
       if(routeButton){
         route(routeButton.dataset.page);
         return;
       }
 
-      const button = event.target.closest('[data-action]');
+      var button = event.target.closest('[data-action]');
 
       if(!button){
         return;
       }
 
-      const action = button.dataset.action;
+      var action = button.dataset.action;
 
       if(action === 'logout') logout();
       if(action === 'refresh') loadApp();
@@ -1836,18 +1922,16 @@
       }
     }
 
-    async function callApi(action,payload,onSuccess,onFail,withLoader){
+    function callApi(action,payload,onSuccess,onFail,withLoader){
       if(withLoader !== false){
         showLoader();
       }
 
-      try{
-        const response = await iTrackApi.call(action, payload || {});
-
+      iTrackApi.call(action, payload || {}).then(function(response){
         hideLoader();
 
         if(!response || !response.success){
-          const message = response && response.message ? response.message : 'Terjadi kesalahan.';
+          var message = response && response.message ? response.message : 'Terjadi kesalahan.';
 
           if(onFail){
             onFail(message);
@@ -1863,10 +1947,10 @@
         if(onSuccess){
           onSuccess(response.data);
         }
-      }catch(error){
+      }).catch(function(error){
         hideLoader();
 
-        const message = error && error.message ? error.message : String(error || 'Terjadi kesalahan.');
+        var message = error && error.message ? error.message : String(error || 'Terjadi kesalahan.');
 
         if(onFail){
           onFail(message);
@@ -1875,7 +1959,7 @@
             { label:'Tutup', className:'light', action:'close-modal' }
           ]);
         }
-      }
+      });
     }
 
     function showLoader(title,text){
@@ -1889,7 +1973,7 @@
     }
 
     function switchAuthTab(tab){
-      const title = {
+      var title = {
         login:['Masuk Sistem','Gunakan akun yang sudah terdaftar.'],
         register:['Daftar Akun','Akun baru masuk sebagai INTERN dan menunggu approval admin.'],
         forgot:['Lupa Kata Sandi','Token reset akan dikirim ke email bila akun terdaftar.'],
@@ -1910,8 +1994,8 @@
     }
 
     function login(){
-      const email = val('loginEmail');
-      const password = val('loginPassword');
+      var email = val('loginEmail');
+      var password = val('loginPassword');
 
       if(!email || !password){
         showModal('Data Belum Lengkap', 'Email dan kata sandi wajib diisi.', '', [
@@ -2022,7 +2106,7 @@
     }
 
     function allowedMenus(){
-      const role = String(state.user && state.user.role || '').toUpperCase();
+      var role = String(state.user && state.user.role || '').toUpperCase();
 
       return MENU.filter(function(menu){
         return menu.roles.includes(role);
@@ -2036,7 +2120,7 @@
     }
 
     function renderNav(){
-      const allowed = allowedMenus();
+      var allowed = allowedMenus();
 
       document.getElementById('sideNav').innerHTML = allowed.map(function(menu){
         return '' +
@@ -2046,7 +2130,7 @@
           '</button>';
       }).join('');
 
-      const bottom = allowed.filter(function(menu){
+      var bottom = allowed.filter(function(menu){
         return ['dashboard','attendance','reports','tasks','profile'].includes(menu.id);
       }).slice(0,5);
 
@@ -2071,7 +2155,7 @@
         renderNav();
       }
 
-      const title = {
+      var title = {
         dashboard:['Dashboard','Ringkasan data iTrack'],
         attendance:['Presensi','Presensi selfie dan dokumentasi lokasi'],
         activities:['Aktivitas Harian','Catatan aktivitas dan progres kerja'],
@@ -2087,7 +2171,7 @@
       document.getElementById('pageTitle').textContent = title[page][0];
       document.getElementById('pageSubtitle').textContent = title[page][1];
 
-      const views = {
+      var views = {
         dashboard:dashboardView,
         attendance:attendanceView,
         activities:activitiesView,
@@ -2100,12 +2184,12 @@
         profile:profileView
       };
 
-      document.getElementById('content').innerHTML = views[page]();
+      document.getElementById('content').innerHTML = views;
     }
 
     function mobileHeader(){
       return '' +
-       lass="mobile-header">' +
+        '<div class="mobile-header">' +
           '<div class="mobile-header-top">' +
             '<strong>iTrack</strong>' +
             'logoutKeluar</button>' +
@@ -2115,10 +2199,10 @@
     }
 
     function dashboardView(){
-      const summary = state.data.summary || {};
-      const totalReports = Number(summary.totalReports || 0);
-      const approved = Number(summary.reportsApproved || 0);
-      const percent = totalReports ? Math.round(approved / totalReports * 100) : 0;
+      var summary = state.data.summary || {};
+      var totalReports = Number(summary.totalReports || 0);
+      var approved = Number(summary.reportsApproved || 0);
+      var percent = totalReports ? Math.round(approved / totalReports * 100) : 0;
 
       return '' +
         mobileHeader() +
@@ -2129,8 +2213,7 @@
           progress(percent, approved + ' / ' + totalReports + ' laporan disetujui') +
           '<div class="actions">' +
             'guidePanduan</button>' +
-            'install-appInstall Aplikasi</button>' +
-            'fullscreenFullscreen</button>' +
+            '<button class="btn outline small" type="button" data-action="install-appn</button>' +
           '</div>' +
         '</div>' +
         servicesView() +
@@ -2159,8 +2242,8 @@
     }
 
     function servicesView(){
-      const role = String(state.user.role || '').toUpperCase();
-      let items = [];
+      var role = String(state.user.role || '').toUpperCase();
+      var items = [];
 
       if(role === 'SUPER ADMIN' || role === 'ADMIN'){
         items = [
@@ -2218,7 +2301,7 @@
               'start-cameraAktifkan Kamera</button>' +
               'capture-photoCapture</button>' +
               'get-gpsAmbil GPS</button>' +
-              '<button class="kan</button>' +
+              'stop-cameraMatikan</button>' +
             '</div>' +
           '</div>' +
           '<div class="card">' +
@@ -2258,9 +2341,9 @@
     }
 
     function activitiesView(){
-      const role = String(state.user.role || '').toUpperCase();
-      const canCreate = role === 'INTERN';
-      let form = '';
+      var role = String(state.user.role || '').toUpperCase();
+      var canCreate = role === 'INTERN';
+      var form = '';
 
       if(canCreate){
         form = '' +
@@ -2302,9 +2385,9 @@
     }
 
     function reportsView(){
-      const role = String(state.user.role || '').toUpperCase();
-      const canCreate = role === 'INTERN';
-      let form = '';
+      var role = String(state.user.role || '').toUpperCase();
+      var canCreate = role === 'INTERN';
+      var form = '';
 
       if(canCreate){
         form = '' +
@@ -2344,9 +2427,9 @@
     }
 
     function tasksView(){
-      const role = String(state.user.role || '').toUpperCase();
-      const canCreate = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role);
-      let form = '';
+      var role = String(state.user.role || '').toUpperCase();
+      var canCreate = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role);
+      var form = '';
 
       if(canCreate){
         form = '' +
@@ -2393,8 +2476,8 @@
     }
 
     function kpiView(){
-      const kpi = state.data.kpi || [];
-      const progressRows = state.data.kpiProgress || [];
+      var kpi = state.data.kpi || [];
+      var progressRows = state.data.kpiProgress || [];
 
       return '' +
         mobileHeader() +
@@ -2431,8 +2514,8 @@
     }
 
     function adminView(){
-      const users = state.data.users || [];
-      const pending = users.filter(function(user){
+      var users = state.data.users || [];
+      var pending = users.filter(function(user){
         return String(user.status || '').toUpperCase() === 'PENDING';
       });
 
@@ -2487,7 +2570,7 @@
     }
 
     function notificationsView(){
-      const list = state.data.notifications || [];
+      var list = state.data.notifications || [];
 
       return '' +
         mobileHeader() +
@@ -2515,7 +2598,7 @@
           '<p>Panduan ini dapat dibaca langsung dan diunduh oleh pengguna.</p>' +
           '<div class="actions">' +
             'download-guide-txtDownload TXT</button>' +
-            'download-guide-wordDownload Word</button>' +
+            '<button classe-wordDownload Word</button>' +
             'install-appInstall Aplikasi</button>' +
             'fullscreenFullscreen</button>' +
           '</div>' +
@@ -2524,7 +2607,7 @@
     }
 
     function profileView(){
-      const user = state.user;
+      var user = state.user;
 
       return '' +
         mobileHeader() +
@@ -2595,7 +2678,7 @@
     }
 
     function latestReportsHtml(){
-      const rows = (state.data.reports || []).slice(-4).reverse();
+      var rows = (state.data.reports || []).slice(-4).reverse();
 
       if(!rows.length){
         return emptyHtml('Belum ada laporan.');
@@ -2605,7 +2688,7 @@
     }
 
     function latestTasksHtml(){
-      const rows = (state.data.tasks || []).slice(-4).reverse();
+      var rows = (state.data.tasks || []).slice(-4).reverse();
 
       if(!rows.length){
         return emptyHtml('Belum ada tugas.');
@@ -2615,7 +2698,7 @@
     }
 
     function attendanceListHtml(){
-      const rows = (state.data.attendance || []).slice().reverse();
+      var rows = (state.data.attendance || []).slice().reverse();
 
       if(!rows.length){
         return emptyHtml('Belum ada presensi.');
@@ -2637,7 +2720,7 @@
     }
 
     function activitiesListHtml(){
-      const rows = (state.data.dailyActivities || []).slice().reverse();
+      var rows = (state.data.dailyActivities || []).slice().reverse();
 
       if(!rows.length){
         return emptyHtml('Belum ada aktivitas.');
@@ -2655,7 +2738,7 @@
     }
 
     function reportsListHtml(){
-      const rows = (state.data.reports || []).slice().reverse();
+      var rows = (state.data.reports || []).slice().reverse();
 
       if(!rows.length){
         return emptyHtml('Belum ada laporan.');
@@ -2665,9 +2748,9 @@
     }
 
     function reportItemHtml(row){
-      const role = String(state.user.role || '').toUpperCase();
-      const canApprove = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role) && String(row['Status Laporan']).toUpperCase() !== 'DISETUJUI';
-      const canRequestEdit = role === 'INTERN';
+      var role = String(state.user.role || '').toUpperCase();
+      var canApprove = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role) && String(row['Status Laporan']).toUpperCase() !== 'DISETUJUI';
+      var canRequestEdit = role === 'INTERN';
 
       return '' +
         '<div class="item">' +
@@ -2684,7 +2767,7 @@
     }
 
     function tasksListHtml(){
-      const rows = (state.data.tasks || []).slice().reverse();
+      var rows = (state.data.tasks || []).slice().reverse();
 
       if(!rows.length){
         return emptyHtml('Belum ada tugas.');
@@ -2694,9 +2777,9 @@
     }
 
     function taskItemHtml(row){
-      const role = String(state.user.role || '').toUpperCase();
-      const canSubmit = role === 'INTERN';
-      const canReview = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role);
+      var role = String(state.user.role || '').toUpperCase();
+      var canSubmit = role === 'INTERN';
+      var canReview = ['SUPER ADMIN','ADMIN','MENTOR'].includes(role);
 
       return '' +
         '<div class="item">' +
@@ -2713,9 +2796,9 @@
     }
 
     function internOptionsHtml(){
-      const users = state.data.users || [];
+      var users = state.data.users || [];
 
-      const interns = users.filter(function(user){
+      var interns = users.filter(function(user){
         return String(user.role || '').toUpperCase() === 'INTERN' &&
           String(user.status || '').toUpperCase() === 'ACTIVE';
       });
@@ -2741,22 +2824,20 @@
       return '<div class="empty">' + esc(text) + '</div>';
     }
 
-    async function startCamera(){
-      try{
-        stopCamera();
+    function startCamera(){
+      stopCamera();
 
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video:{
-            facingMode:{ ideal:'user' },
-            width:{ ideal:1280 },
-            height:{ ideal:720 }
-          },
-          audio:false
-        });
-
+      navigator.mediaDevices.getUserMedia({
+        video:{
+          facingMode:{ ideal:'user' },
+          width:{ ideal:1280 },
+          height:{ ideal:720 }
+        },
+        audio:false
+      }).then(function(stream){
         state.stream = stream;
 
-        const box = document.getElementById('cameraBox');
+        var box = document.getElementById('cameraBox');
 
         if(!box){
           return;
@@ -2767,11 +2848,11 @@
           '<div class="camera-caption">Kamera aktif. Tekan Capture untuk mengambil foto.</div>';
 
         document.getElementById('cameraVideo').srcObject = stream;
-      }catch(error){
+      }).catch(function(){
         showModal('Kamera Gagal','Pastikan browser memiliki izin kamera dan aplikasi dibuka melalui HTTPS.','',[
           { label:'Tutup', className:'light', action:'close-modal' }
         ]);
-      }
+      });
     }
 
     function stopCamera(){
@@ -2785,7 +2866,7 @@
     }
 
     function capturePhoto(){
-      const video = document.getElementById('cameraVideo');
+      var video = document.getElementById('cameraVideo');
 
       if(!video){
         showModal('Kamera Belum Aktif','Aktifkan kamera terlebih dahulu.','',[
@@ -2794,20 +2875,20 @@
         return;
       }
 
-      const canvas = document.getElementById('photoCanvas');
-      const width = video.videoWidth || 1280;
-      const height = video.videoHeight || 720;
+      var canvas = document.getElementById('photoCanvas');
+      var width = video.videoWidth || 1280;
+      var height = video.videoHeight || 720;
 
       canvas.width = width;
       canvas.height = height;
 
-      const ctx = canvas.getContext('2d');
+      var ctx = canvas.getContext('2d');
       ctx.drawImage(video,0,0,width,height);
       drawWatermark(ctx,width,height);
 
       state.photoBase64 = canvas.toDataURL('image/jpeg', .82);
 
-      const preview = document.getElementById('photoPreview');
+      var preview = document.getElementById('photoPreview');
 
       if(preview){
         preview.innerHTML = '<img src="' + state.photoBase64 + '" alt="Foto presensi">';
@@ -2815,17 +2896,17 @@
     }
 
     function drawWatermark(ctx,width,height){
-      const lines = [
+      var lines = [
         'ITRACK VERIFIED',
         'Nama: ' + (state.user.name || '-'),
         'Waktu: ' + new Date().toLocaleString('id-ID', { hour12:false }),
         'GPS: ' + (state.gps.latitude || '-') + ', ' + (state.gps.longitude || '-')
       ];
 
-      const x = 24;
-      const y = height - 148;
-      const boxWidth = Math.min(560, width - 48);
-      const boxHeight = 120;
+      var x = 24;
+      var y = height - 148;
+      var boxWidth = Math.min(560, width - 48);
+      var boxHeight = 120;
 
       ctx.fillStyle = 'rgba(15,23,42,.78)';
       roundRect(ctx,x,y,boxWidth,boxHeight,22);
@@ -2867,7 +2948,7 @@
         state.gps.latitude = position.coords.latitude;
         state.gps.longitude = position.coords.longitude;
 
-        const info = document.getElementById('gpsInfo');
+        var info = document.getElementById('gpsInfo');
 
         if(info){
           info.textContent = 'GPS: ' + state.gps.latitude + ', ' + state.gps.longitude;
@@ -3131,7 +3212,7 @@
     }
 
     function logout(){
-      const token = state.sessionToken;
+      var token = state.sessionToken;
 
       stopCamera();
 
@@ -3149,11 +3230,12 @@
       showAuth();
     }
 
-    async function installApp(){
+    function installApp(){
       if(deferredInstallPrompt){
         deferredInstallPrompt.prompt();
-        await deferredInstallPrompt.userChoice;
-        deferredInstallPrompt = null;
+        deferredInstallPrompt.userChoice.then(function(){
+          deferredInstallPrompt = null;
+        });
         return;
       }
 
@@ -3163,8 +3245,8 @@
     }
 
     function toggleFullscreen(){
-      const doc = document;
-      const el = document.documentElement;
+      var doc = document;
+      var el = document.documentElement;
 
       if(!doc.fullscreenElement){
         if(el.requestFullscreen){
@@ -3180,8 +3262,8 @@
     function showModal(title,message,extra,actions,wide){
       document.body.classList.add('modal-open');
 
-      const root = document.getElementById('modalRoot');
-      const card = document.getElementById('modalCard');
+      var root = document.getElementById('modalRoot');
+      var card = document.getElementById('modalCard');
 
       card.classList.toggle('wide', !!wide);
 
@@ -3190,7 +3272,7 @@
       document.getElementById('modalMessage').textContent = message || '';
       document.getElementById('modalExtra').innerHTML = extra || '';
 
-      const modalActions = actions || [
+      var modalActions = actions || [
         { label:'Tutup', className:'light', action:'close-modal' }
       ];
 
@@ -3293,7 +3375,7 @@
     }
 
     function downloadGuideWord(){
-      const html =
+      var html =
         '<html><head><meta charset="UTF-8"><title>Panduan iTrack</title></head><body>' +
         '<h1>Panduan Penggunaan iTrack</h1>' +
         '<pre style="font-family:Arial;white-space:pre-wrap;line-height:1.6">' + esc(getGuideText()) + '</pre>' +
@@ -3305,8 +3387,8 @@
     }
 
     function downloadBlob(filename,blob){
-      const url = URL.createObjectURL(blob);
-      const anchor = document.createElement('a');
+      var url = URL.createObjectURL(blob);
+      var anchor = document.createElement('a');
 
       anchor.href = url;
       anchor.download = filename;
@@ -3321,7 +3403,7 @@
     }
 
     function statusClass(status){
-      const value = String(status || '').toUpperCase();
+      var value = String(status || '').toUpperCase();
 
       if(['ACTIVE','AKTIF','DISETUJUI','VALID','BERHASIL','YA','SELESAI'].includes(value)) return 'green';
       if(['PENDING','MENUNGGU','DIKIRIM','DIREVIEW','BARU','DIKERJAKAN','MENUNGGU EDIT'].includes(value)) return 'amber';
@@ -3332,7 +3414,7 @@
     }
 
     function val(id){
-      const element = document.getElementById(id);
+      var element = document.getElementById(id);
       return element ? String(element.value || '').trim() : '';
     }
 
@@ -3341,7 +3423,7 @@
         return '';
       }
 
-      const parts = value.split('-');
+      var parts = value.split('-');
 
       if(parts.length !== 3){
         return value;
