@@ -1,0 +1,25 @@
+{
+  "name": "iTrack Internship OJK DIY",
+  "short_name": "iTrack",
+  "description": "Internship Tracker untuk absensi, laporan, izin, dan monitoring magang.",
+  "start_url": "./id.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F6FAFD",
+  "theme_color": "#4BA9D9",
+  "icons": [
+    {
+      "src": "https://ik.imagekit.io/logojkdiy/ITrack.png?updatedAt=1780625610938",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://ik.imagekit.io/logojkdiy/ITrack.png?updatedAt=1780625610938",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
