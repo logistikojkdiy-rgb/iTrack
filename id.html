@@ -5870,64 +5870,1264 @@ function initAll(){setTimeout(()=>{initReport();initExport()},80)}const oldOpen=
 })();
 </script>
 
-<!-- PATCH NATIVE PROGRESS LOADING V10 - iTrack Native Android/iOS + Local Ready -->
-<style id="itrack-native-progress-v10-style">
-  .inpv10-bg{position:fixed;inset:0;z-index:490000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(16,31,52,.38);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-  .inpv10-bg.show{display:flex}.inpv10-card{width:min(430px,100%);border-radius:32px;background:rgba(255,255,255,.97);border:1px solid rgba(230,238,244,.96);box-shadow:0 34px 110px rgba(23,42,69,.28);padding:22px;overflow:hidden;animation:inpv10Rise .18s ease-out}@keyframes inpv10Rise{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
-  .inpv10-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}.inpv10-logo{width:56px;height:56px;border-radius:20px;background:#fff var(--logo,url('https://ik.imagekit.io/logojkdiy/ITrack.png?updatedAt=1780625610938')) center/74% no-repeat;box-shadow:0 14px 30px rgba(75,169,217,.18);position:relative;flex:0 0 auto}.inpv10-logo:after{content:"";position:absolute;inset:-5px;border-radius:25px;border:3px solid rgba(75,169,217,.14);border-top-color:var(--blue,#4BA9D9);animation:inpv10Spin .85s linear infinite}@keyframes inpv10Spin{to{transform:rotate(360deg)}}
-  .inpv10-titlebox{min-width:0;flex:1}.inpv10-kicker{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:var(--blue3,#EAF7FD);color:var(--blue2,#2F8FC4);font-size:10px;font-weight:850;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;margin-bottom:7px}.inpv10-title{margin:0;color:var(--navy,#172A45);font-size:17px;font-weight:850;letter-spacing:-.25px}.inpv10-message{margin:5px 0 0;color:var(--muted,#74869A);font-size:12px;line-height:1.55}.inpv10-percent{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;margin:16px 0 9px}.inpv10-num{color:var(--navy,#172A45);font-size:30px;font-weight:900;letter-spacing:-1.1px}.inpv10-stage{color:var(--muted,#74869A);font-size:11px;line-height:1.45;min-width:0}.inpv10-stage b{display:block;color:var(--ink,#26384F);font-size:12px;margin-bottom:2px}.inpv10-dot{width:10px;height:10px;border-radius:999px;background:var(--blue,#4BA9D9);box-shadow:0 0 0 7px rgba(75,169,217,.12);animation:inpv10Pulse 1.1s ease-in-out infinite}@keyframes inpv10Pulse{50%{transform:scale(.72);opacity:.72}}
-  .inpv10-track{height:12px;border-radius:999px;background:#EAF2F7;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}.inpv10-bar{height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--blue2,#2F8FC4),var(--blue,#4BA9D9),#73C8EA);box-shadow:0 10px 20px rgba(75,169,217,.28);transition:width .25s cubic-bezier(.2,.8,.2,1);position:relative}.inpv10-bar:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:translateX(-100%);animation:inpv10Sheen 1.25s linear infinite}@keyframes inpv10Sheen{to{transform:translateX(120%)}}
-  .inpv10-detail{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.inpv10-chip{border:1px solid var(--line,#E6EEF4);background:#FBFEFF;border-radius:16px;padding:10px 11px;min-width:0}.inpv10-chip small{display:block;color:var(--muted,#74869A);font-size:9px;text-transform:uppercase;letter-spacing:.07em;font-weight:850;margin-bottom:5px}.inpv10-chip span{display:block;color:var(--navy,#172A45);font-size:12px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.inpv10-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;color:var(--muted,#74869A);font-size:10px;line-height:1.4}.inpv10-foot strong{color:var(--blue2,#2F8FC4)}
-  .inpv10-local{position:fixed;left:14px;right:14px;top:14px;z-index:500000;background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;border-radius:18px;padding:12px 14px;font:12px/1.5 Arial,sans-serif;box-shadow:0 16px 48px rgba(23,42,69,.16)}.inpv10-local b{display:block;margin-bottom:2px;color:#7c2d12}.inpv10-local button{float:right;border:0;background:#fed7aa;color:#7c2d12;border-radius:10px;padding:4px 8px;font-weight:800}
-  @media(max-width:520px){.inpv10-bg{align-items:flex-end;padding:12px}.inpv10-card{border-radius:28px 28px calc(28px + env(safe-area-inset-bottom,0px)) calc(28px + env(safe-area-inset-bottom,0px));padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.inpv10-title{font-size:16px}.inpv10-num{font-size:27px}.inpv10-detail{grid-template-columns:1fr}}
+<!-- PATCH LOADING NATIVE CLEAN V18 - read tanpa popup, write tetap native fullscreen -->
+<style id="itrack-native-loading-v18-style">
+  .it17-mini,.it16-mini,.it15-mini,.itn14-mini,.itv11-mini,#it17Mini,#it16Mini,#it15Mini,#itn14Mini,#itv11Mini{display:none!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important}
 </style>
-<script id="itrack-native-progress-v10-script">
+<script id="itrack-native-loading-v18-script">
 (function(){
   'use strict';
-  var API_TIMEOUT_MS=45000;
-  var API_ALIAS={getWorkReportsForUser:'getMyWorkReports',getUserReports:'getMyWorkReports',getReportItems:'getWorkReportItems',getWorkReportFullDetail:'getMyWorkReportFullDetail',resubmitReportRevision:'resubmitWorkReportRevision',editWorkReportRevision:'updateWorkReportRevision'};
-  var FRIENDLY={
-    loginUser:['Memverifikasi akun','Mengecek username, sandi, dan hak akses.'],login:['Memverifikasi akun','Mengecek username, sandi, dan hak akses.'],registerUserWithEmail:['Mengirim pendaftaran','Menyimpan data pendaftaran peserta.'],
-    getSystemSettings:['Memuat pengaturan','Mengambil konfigurasi aplikasi.'],updateSystemSettings:['Menyimpan pengaturan','Memperbarui konfigurasi sistem.'],getDashboardSummary:['Memuat dashboard','Mengambil ringkasan data terbaru.'],getDashboardAlerts:['Memuat alert admin','Mengambil data yang perlu ditindaklanjuti.'],
-    getMyWorkReports:['Memuat riwayat laporan','Mengambil daftar laporan kerja yang sudah dikirim.'],getWorkReportsForUser:['Memuat riwayat laporan','Mengambil daftar laporan kerja yang sudah dikirim.'],getUserReports:['Memuat riwayat laporan','Mengambil daftar laporan kerja peserta.'],getWorkReportsForAdmin:['Memuat laporan peserta','Mengambil daftar laporan untuk validasi admin.'],
-    getWorkReportItems:['Memuat detail kegiatan','Mengambil rincian kegiatan dan dokumentasi.'],getReportItems:['Memuat detail kegiatan','Mengambil rincian kegiatan dan dokumentasi.'],getMyWorkReportFullDetail:['Memuat detail laporan','Mengambil isi laporan dan catatan revisi.'],
-    submitWorkReport:['Mengirim laporan kerja','Menyimpan kegiatan dan dokumentasi ke backend.'],adminUpdateWorkReportStatus:['Memvalidasi laporan','Menyimpan status dan catatan admin.'],resubmitWorkReportRevision:['Mengirim revisi laporan','Menyimpan pembaruan revisi laporan.'],updateWorkReportRevision:['Mengirim revisi laporan','Menyimpan pembaruan revisi laporan.'],submitWorkReportRevision:['Mengirim revisi laporan','Menyimpan pembaruan revisi laporan.'],
-    getAttendanceToday:['Memuat status absensi','Mengecek status masuk dan pulang hari ini.'],getMyAttendance:['Memuat riwayat absensi','Mengambil data kehadiran peserta.'],getAttendanceMonitoring:['Memuat monitoring absensi','Mengambil data absensi untuk admin.'],submitAttendanceIn:['Mengirim absen masuk','Menyimpan selfie dan lokasi masuk.'],submitAttendanceOut:['Mengirim absen pulang','Menyimpan selfie dan lokasi pulang.'],submitAttendanceOutside:['Mengirim absensi luar lokasi','Menyimpan bukti dan lokasi tugas.'],validateAttendanceRecord:['Memvalidasi absensi','Menyimpan status validasi absensi.'],
-    getMyLeaves:['Memuat data izin','Mengambil riwayat pengajuan izin.'],submitLeave:['Mengirim pengajuan izin','Menyimpan data izin dan bukti pendukung.'],getLeavesForAdmin:['Memuat data izin','Mengambil daftar izin untuk approval.'],updateLeaveStatus:['Memvalidasi izin','Menyimpan persetujuan atau penolakan izin.'],
-    getPendingRegistrations:['Memuat registrasi','Mengambil daftar pendaftaran baru.'],approveRegistration:['Menyetujui registrasi','Mengaktifkan akun peserta.'],rejectRegistration:['Menolak registrasi','Menyimpan catatan penolakan.'],getUsers:['Memuat data peserta','Mengambil daftar akun pengguna.'],getAdminData:['Memuat daftar peserta','Mengambil pilihan peserta untuk filter.'],
-    exportAttendancePdf:['Menyiapkan PDF absensi','Membuat file rekap absensi.'],exportWorkReportPdf:['Menyiapkan PDF laporan','Membuat file rekap laporan.'],exportAttendanceCsv:['Menyiapkan CSV absensi','Membuat file rekap absensi.'],exportWorkReportCsv:['Menyiapkan CSV laporan','Membuat file rekap laporan.'],getExportLogs:['Memuat log export','Mengambil riwayat unduhan data.'],
-    updateUserProfileDetails:['Menyimpan profil','Memperbarui data profil pengguna.'],updateProfilePhotoBase64:['Mengunggah foto profil','Menyimpan foto profil baru.'],changePassword:['Mengubah password','Memperbarui kata sandi akun.'],getServerTime:['Sinkronisasi waktu','Mengambil waktu resmi dari backend.'],getMyRecentActivities:['Memuat aktivitas terakhir','Mengambil ringkasan aktivitas terbaru.'],getMyAttendanceCalendar:['Memuat kalender absensi','Mengambil data kehadiran bulanan.'],getInternshipProgress:['Memuat progress magang','Menghitung progres periode internship.']
+  var API_BARU = 'https://script.google.com/macros/s/AKfycbxJQ-MUX4HCH2Px3zWeC7a1mJ1MTJ03o_CWoPF160kfIatq8y3SiHtzBDlTvj8DpcXJUA/exec';
+  try{ window.API_URL = API_BARU; }catch(e){}
+
+  function isReadTitle(title){
+    return /^(Memuat|Mengambil|Mengecek|Memeriksa)/i.test(String(title||''));
+  }
+  function isReadAction(action){
+    return /^(get|load|check|fetch)/i.test(String(action||''));
+  }
+  function hideTopPopup(){
+    ['.it17-mini','.it16-mini','.it15-mini','.itn14-mini','.itv11-mini','#it17Mini','#it16Mini','#it15Mini','#itn14Mini','#itv11Mini'].forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(el){
+        try{ el.classList.remove('show'); el.style.display='none'; el.style.opacity='0'; el.style.visibility='hidden'; el.style.pointerEvents='none'; }catch(e){}
+      });
+    });
+  }
+
+  var oldShowLoading = window.showLoading;
+  var oldHideLoading = window.hideLoading;
+
+  window.showLoading = function(title, desc){
+    if(isReadTitle(title)){
+      hideTopPopup();
+      return null;
+    }
+    if(typeof oldShowLoading === 'function'){
+      return oldShowLoading(title, desc);
+    }
+    var loader = document.getElementById('loading');
+    var t = document.getElementById('loadingTitle');
+    var d = document.getElementById('loadingText');
+    if(t) t.textContent = title || 'Memproses...';
+    if(d) d.textContent = desc || 'Mohon tunggu sebentar.';
+    if(loader) loader.classList.add('show');
+    return Date.now();
   };
-  var stageMap={start:['Menyiapkan proses','Membuka koneksi aman.'],validate:['Validasi data','Memeriksa kelengkapan input.'],send:['Mengirim ke backend','Menyinkronkan data ke server.'],process:['Diproses backend','Menunggu penyimpanan dan validasi data.'],sync:['Sinkronisasi UI','Memperbarui tampilan aplikasi.'],done:['Selesai','Proses berhasil diselesaikan.'],error:['Terjadi kendala','Menyiapkan informasi error.']};
-  var state={visible:false,percent:0,target:0,timer:null,started:0,hideTimer:null,title:'Memproses data aplikasi',message:'Mohon tunggu sebentar.',process:'Aplikasi',status:'Berjalan'};
-  function label(action){if(FRIENDLY[action])return FRIENDLY[action];var a=String(action||'').toLowerCase();if(a.includes('attendance')||a.includes('absensi'))return['Memuat data absensi','Mengambil atau menyimpan data kehadiran.'];if(a.includes('report')||a.includes('laporan')||a.includes('work'))return['Memuat data laporan','Mengambil atau menyimpan data laporan kerja.'];if(a.includes('revision')||a.includes('revisi'))return['Memproses revisi','Mengambil atau menyimpan revisi laporan.'];if(a.includes('leave')||a.includes('izin'))return['Memuat data izin','Mengambil atau menyimpan pengajuan izin.'];if(a.includes('export')||a.includes('pdf')||a.includes('csv'))return['Menyiapkan export','Membuat file rekap data.'];if(a.includes('user')||a.includes('profile'))return['Memuat data pengguna','Mengambil atau menyimpan data pengguna.'];return['Memproses data aplikasi','Menghubungkan aplikasi dengan backend.'];}
-  function ensure(){var old=document.getElementById('loading');if(old)old.classList.remove('show');var el=document.getElementById('inpv10');if(el)return el;el=document.createElement('div');el.id='inpv10';el.className='inpv10-bg';el.innerHTML='<div class="inpv10-card" role="status" aria-live="polite"><div class="inpv10-top"><div class="inpv10-logo"></div><div class="inpv10-titlebox"><div class="inpv10-kicker">iTrack Native Process</div><h3 class="inpv10-title" id="inpv10Title">Memproses data aplikasi</h3><p class="inpv10-message" id="inpv10Message">Mohon tunggu sebentar.</p></div></div><div class="inpv10-percent"><div class="inpv10-num"><span id="inpv10Num">0</span>%</div><div class="inpv10-stage"><b id="inpv10StageTitle">Menyiapkan proses</b><span id="inpv10StageText">Membuka koneksi aman.</span></div><div class="inpv10-dot"></div></div><div class="inpv10-track"><div class="inpv10-bar" id="inpv10Bar"></div></div><div class="inpv10-detail"><div class="inpv10-chip"><small>Proses</small><span id="inpv10Process">Aplikasi</span></div><div class="inpv10-chip"><small>Status</small><span id="inpv10Status">Berjalan</span></div></div><div class="inpv10-foot"><span>Jangan tutup aplikasi saat proses berlangsung.</span><strong id="inpv10Time">0.0s</strong></div></div>';document.body.appendChild(el);return el;}
-  function set(id,v){var e=document.getElementById(id);if(e)e.textContent=v==null?'':String(v)}function clamp(n,a,b){return Math.max(a,Math.min(b,Number(n)||0))}
-  function setStage(k){var s=stageMap[k]||stageMap.start;set('inpv10StageTitle',s[0]);set('inpv10StageText',s[1])}
-  function render(){ensure();state.percent+=(state.target-state.percent)*0.24;if(Math.abs(state.target-state.percent)<.45)state.percent=state.target;var p=Math.round(clamp(state.percent,0,100));set('inpv10Num',p);var b=document.getElementById('inpv10Bar');if(b)b.style.width=p+'%';set('inpv10Time',((Date.now()-state.started)/1000).toFixed(1)+'s')}
-  function loop(){clearInterval(state.timer);state.timer=setInterval(function(){if(!state.visible)return;var e=Date.now()-state.started,cap=92;if(state.target<cap)state.target=Math.min(cap,state.target+(e>900?.75:.35));if(e>650&&state.target<24)update(24,'validate');if(e>1300&&state.target<45)update(45,'send');if(e>2500&&state.target<70)update(70,'process');if(e>5200&&state.target<86)update(86,'sync');render()},120)}
-  function begin(title,msg,opt){opt=opt||{};clearTimeout(state.hideTimer);ensure();state.visible=true;state.started=Date.now();state.percent=0;state.target=Number(opt.start||10);state.title=title||state.title;state.message=msg||state.message;state.process=opt.process||title||'Aplikasi';state.status='Berjalan';document.getElementById('inpv10').classList.add('show');set('inpv10Title',state.title);set('inpv10Message',state.message);set('inpv10Process',state.process);set('inpv10Status',state.status);setStage('start');render();loop();return Date.now()}
-  function update(p,stage,title,msg){ensure();if(!state.visible)begin(title||state.title,msg||state.message,{start:p||12,process:title||state.process});if(title){set('inpv10Title',title);set('inpv10Process',title)}if(msg)set('inpv10Message',msg);if(stage)setStage(stage);state.target=clamp(p==null?state.target:p,0,99);render()}
-  function hideNow(){clearInterval(state.timer);state.visible=false;var el=document.getElementById('inpv10');if(el)el.classList.remove('show');var old=document.getElementById('loading');if(old)old.classList.remove('show')}
-  function complete(title,msg){if(!state.visible)return;clearInterval(state.timer);state.target=100;state.percent=100;if(title)set('inpv10Title',title);if(msg)set('inpv10Message',msg);setStage('done');set('inpv10Status','Selesai');render();var wait=Math.max(420,760-(Date.now()-state.started));clearTimeout(state.hideTimer);state.hideTimer=setTimeout(hideNow,wait)}
-  function fail(title,msg){if(!state.visible)return;clearInterval(state.timer);state.target=Math.max(state.target,96);state.percent=state.target;if(title)set('inpv10Title',title);if(msg)set('inpv10Message',msg);setStage('error');set('inpv10Status','Gagal');render();clearTimeout(state.hideTimer);state.hideTimer=setTimeout(hideNow,1300)}
-  function currentUserSafe(){try{if(window.currentUser)return window.currentUser}catch(e){}try{return JSON.parse(localStorage.getItem('iTrack_user')||localStorage.getItem('itrack_current_user')||'{}')}catch(e){return{}}}
-  function normalizePayload(action,p){p=p||{};var u=currentUserSafe();if((action==='getMyWorkReports'||action==='getWorkReportsForUser'||action==='getUserReports')&&!p.userId)p.userId=u.USER_ID||u.userId||'';if((action==='getMyWorkReports'||action==='getWorkReportsForUser'||action==='getUserReports')&&!p.username)p.username=u.USERNAME||u.username||'';if(p.idLaporan&&!p.reportId)p.reportId=p.idLaporan;if(p.reportId&&!p.idLaporan)p.idLaporan=p.reportId;return p}
-  function timeout(ms,action){return new Promise(function(_,reject){setTimeout(function(){reject(new Error('Backend belum merespons untuk proses '+label(action)[0].toLowerCase()+'. Coba refresh, cek koneksi, atau cek deployment Apps Script.'))},ms)})}
-  function cleanTimes(){document.querySelectorAll('input[type="time"]').forEach(function(i){var v=String(i.value||i.getAttribute('value')||'');var m=v.match(/(\d{1,2}):(\d{2})/);if(m)i.value=String(m[1]).padStart(2,'0')+':'+m[2]})}
-  function patchTimeSetter(){try{var d=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value');if(!d||!d.set||HTMLInputElement.prototype.__itrackTimeV10)return;Object.defineProperty(HTMLInputElement.prototype,'value',{get:function(){return d.get.call(this)},set:function(v){if(this&&this.type==='time'&&typeof v==='string'){var m=v.match(/(\d{1,2}):(\d{2})/);if(m)v=String(m[1]).padStart(2,'0')+':'+m[2]}return d.set.call(this,v)}});HTMLInputElement.prototype.__itrackTimeV10=true}catch(e){}}
-  function localWarn(){if(location.protocol!=='file:')return;var el=document.createElement('div');el.className='inpv10-local';el.innerHTML='<button onclick="this.parentNode.remove()">OK</button><b>Mode file lokal terdeteksi.</b>Untuk hasil penuh seperti aplikasi native, jalankan lewat <b>run-local-server.bat</b> lalu buka <b>http://localhost:8080/id.html</b>.';document.body.appendChild(el);setTimeout(function(){try{el.remove()}catch(e){}},12000)}
-  window.iTrackNativeProgress={begin:begin,update:update,complete:complete,fail:fail,end:function(){complete('Selesai','Proses berhasil diselesaikan.')},clear:hideNow,isVisible:function(){return state.visible}};
-  window.iTrackNativeLoading=window.iTrackNativeProgress;
-  window.showLoading=function(t,m){return begin(t||'Memproses data aplikasi',m||'Mohon tunggu sebentar.',{start:10,process:t||'Aplikasi'})};
-  window.hideLoading=function(){complete('Selesai','Proses berhasil diselesaikan.')};
-  function wrapApi(){if(typeof window.api!=='function'||window.api.__itrackNativeV10)return false;var base=window.api;var wrapped=async function(action,payload){var original=action,mapped=API_ALIAS[action]||action,l=label(original);payload=normalizePayload(mapped,payload);begin(l[0],l[1],{start:14,process:l[0]});update(30,'send',l[0],'Mengirim permintaan ke backend.');try{var slow=setTimeout(function(){update(72,'process',l[0],'Backend masih memproses data.')},2500);var res=await Promise.race([base.call(this,mapped,payload),timeout(API_TIMEOUT_MS,original)]);clearTimeout(slow);update(94,'sync',l[0],'Memperbarui tampilan aplikasi.');complete('Selesai','Data berhasil disinkronkan.');return res}catch(err){fail('Proses gagal',err&&err.message?err.message:'Terjadi kesalahan.');throw err}};wrapped.__itrackNativeV10=true;window.api=wrapped;return true}
-  function dynamicManifestAndSW(){try{if(location.protocol==='file:')return;var link=document.querySelector('link[rel="manifest"]');if(!link){link=document.createElement('link');link.rel='manifest';link.href='./manifest.webmanifest';document.head.appendChild(link)}if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(function(){})}}catch(e){}}
-  window.registerSW=function(){dynamicManifestAndSW()};
-  function boot(){localWarn();patchTimeSetter();cleanTimes();dynamicManifestAndSW();var n=0,t=setInterval(function(){n++;wrapApi();cleanTimes();if(n>30)clearInterval(t)},350)}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
-  window.addEventListener('unhandledrejection',function(e){if(state.visible)fail('Proses gagal',e&&e.reason&&e.reason.message?e.reason.message:'Terjadi kendala pada proses aplikasi.')});
-  console.warn('[iTrack] Native Progress Loading V10 aktif: API lama, label awam, anti-stuck, local-ready.');
+
+  window.hideLoading = function(){
+    hideTopPopup();
+    if(typeof oldHideLoading === 'function'){
+      try{ return oldHideLoading(); }catch(e){}
+    }
+    var loader = document.getElementById('loading');
+    if(loader) loader.classList.remove('show');
+  };
+
+  // If later patches expose iTrackNativeLoading, make read actions silent and write actions use existing main loading.
+  window.iTrackNativeLoading = {
+    begin:function(title, desc){ return window.showLoading(title, desc); },
+    update:function(){},
+    end:function(){ window.hideLoading(); },
+    complete:function(){ window.hideLoading(); },
+    fail:function(title, msg){ window.hideLoading(); if(typeof window.toast==='function') window.toast(title||'Proses gagal', msg||'Terjadi kesalahan.', 'error'); },
+    clear:function(){ window.hideLoading(); }
+  };
+  window.iTrackNativeProgress = window.iTrackNativeLoading;
+  window.iTrackForceHideTopPopup = hideTopPopup;
+
+  function boot(){
+    hideTopPopup();
+    try{ window.API_URL = API_BARU; }catch(e){}
+    if(location.protocol !== 'file:'){
+      try{
+        var link = document.querySelector('link[rel="manifest"]');
+        if(!link){
+          link = document.createElement('link');
+          link.rel = 'manifest';
+          link.href = './manifest.webmanifest';
+          document.head.appendChild(link);
+        }
+      }catch(e){}
+      try{
+        if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(function(){});
+      }catch(e){}
+    }
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  setTimeout(boot,300);
+  setTimeout(boot,1200);
+  setInterval(hideTopPopup,1000);
+  console.warn('[iTrack] Native Loading Clean V18 aktif: read tanpa popup atas, write tetap native fullscreen, API baru aktif.');
+})();
+</script>
+<!-- PATCH NATIVE LOADING V19 - SIMPLE ELEGANT, NO TOP POPUP, CONTEXTUAL TEXT -->
+<style id="itrack-native-loading-v19-style">
+  /* Matikan popup kecil lama yang muncul di atas */
+  .it17-mini,
+  .it16-mini,
+  .it15-mini,
+  .itn14-mini,
+  .itv11-mini,
+  #it17Mini,
+  #it16Mini,
+  #it15Mini,
+  #itn14Mini,
+  #itv11Mini {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  #itn19Overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483646;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(75,169,217,.18), transparent 34%),
+      radial-gradient(circle at 80% 70%, rgba(47,143,196,.16), transparent 38%),
+      rgba(16,31,52,.34);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  #itn19Overlay.show {
+    display: flex;
+  }
+
+  .itn19-card {
+    width: min(420px, 100%);
+    border-radius: 30px;
+    background: rgba(255,255,255,.98);
+    border: 1px solid rgba(230,238,244,.96);
+    box-shadow:
+      0 34px 100px rgba(23,42,69,.28),
+      0 1px 0 rgba(255,255,255,.8) inset;
+    padding: 22px;
+    overflow: hidden;
+    transform: translateY(8px) scale(.985);
+    opacity: 0;
+    animation: itn19Rise .22s ease forwards;
+  }
+
+  @keyframes itn19Rise {
+    to {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  .itn19-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .itn19-logo {
+    width: 58px;
+    height: 58px;
+    border-radius: 21px;
+    background:
+      #fff
+      url('https://ik.imagekit.io/logojkdiy/ITrack.png?updatedAt=1780625610938')
+      center / 74% no-repeat;
+    box-shadow: 0 14px 34px rgba(75,169,217,.20);
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .itn19-logo::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 27px;
+    border: 3px solid rgba(75,169,217,.14);
+    border-top-color: #4BA9D9;
+    border-right-color: rgba(47,143,196,.55);
+    animation: itn19Spin .85s linear infinite;
+  }
+
+  @keyframes itn19Spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .itn19-kicker {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    background: #EAF7FD;
+    color: #2F8FC4;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: 5px 9px;
+    margin-bottom: 7px;
+  }
+
+  .itn19-title {
+    margin: 0;
+    color: #172A45;
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 880;
+    letter-spacing: -.2px;
+  }
+
+  .itn19-message {
+    margin: 5px 0 0;
+    color: #74869A;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .itn19-progress-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    margin: 16px 0 10px;
+  }
+
+  .itn19-percent {
+    color: #172A45;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 920;
+    letter-spacing: -1px;
+  }
+
+  .itn19-stage {
+    color: #74869A;
+    font-size: 11px;
+    line-height: 1.45;
+    min-width: 0;
+  }
+
+  .itn19-stage b {
+    display: block;
+    color: #26384F;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .itn19-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #4BA9D9;
+    box-shadow: 0 0 0 7px rgba(75,169,217,.12);
+    animation: itn19Pulse 1.1s ease-in-out infinite;
+  }
+
+  @keyframes itn19Pulse {
+    50% {
+      transform: scale(.72);
+      opacity: .72;
+    }
+  }
+
+  .itn19-track {
+    height: 12px;
+    border-radius: 999px;
+    background: #EAF2F7;
+    overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  .itn19-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2F8FC4, #4BA9D9, #73C8EA);
+    box-shadow: 0 10px 20px rgba(75,169,217,.28);
+    transition: width .24s cubic-bezier(.2,.8,.2,1);
+    position: relative;
+  }
+
+  .itn19-bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.58), transparent);
+    transform: translateX(-100%);
+    animation: itn19Sheen 1.15s linear infinite;
+  }
+
+  @keyframes itn19Sheen {
+    to { transform: translateX(120%); }
+  }
+
+  .itn19-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .itn19-chip {
+    border: 1px solid #E6EEF4;
+    background: #FBFEFF;
+    border-radius: 16px;
+    padding: 10px 11px;
+    min-width: 0;
+  }
+
+  .itn19-chip small {
+    display: block;
+    color: #74869A;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    font-weight: 850;
+    margin-bottom: 5px;
+  }
+
+  .itn19-chip span {
+    display: block;
+    color: #172A45;
+    font-size: 12px;
+    font-weight: 760;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .itn19-foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 14px;
+    color: #74869A;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .itn19-foot strong {
+    color: #2F8FC4;
+  }
+
+  @media(max-width:520px) {
+    #itn19Overlay {
+      align-items: flex-end;
+      padding: 12px;
+    }
+
+    .itn19-card {
+      border-radius:
+        28px 28px
+        calc(28px + env(safe-area-inset-bottom, 0px))
+        calc(28px + env(safe-area-inset-bottom, 0px));
+      padding: 20px 18px calc(20px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .itn19-info {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script id="itrack-native-loading-v19-script">
+(function(){
+  'use strict';
+
+  var API_BARU = 'https://script.google.com/macros/s/AKfycbxJQ-MUX4HCH2Px3zWeC7a1mJ1MTJ03o_CWoPF160kfIatq8y3SiHtzBDlTvj8DpcXJUA/exec';
+
+  try {
+    window.API_URL = API_BARU;
+  } catch(e) {}
+
+  var state = {
+    visible: false,
+    percent: 0,
+    target: 0,
+    timer: null,
+    started: 0,
+    hideTimer: null,
+    autoHideTimer: null,
+    activeCount: 0
+  };
+
+  var ACTION_LABELS = {
+    login: ['Memverifikasi akun', 'Mengecek username, kata sandi, dan hak akses.'],
+    loginUser: ['Memverifikasi akun', 'Mengecek username, kata sandi, dan hak akses.'],
+    registerUserWithEmail: ['Mengirim pendaftaran', 'Menyimpan data pendaftaran peserta.'],
+
+    submitAttendance: ['Mengunggah absensi', 'Mengirim selfie, lokasi GPS, dan status kehadiran.'],
+    submitAttendanceIn: ['Mengunggah absen masuk', 'Mengirim selfie dan lokasi masuk.'],
+    submitAttendanceOut: ['Mengunggah absen pulang', 'Mengirim selfie dan lokasi pulang.'],
+    submitAttendanceOutside: ['Mengunggah absensi luar lokasi', 'Mengirim bukti, alasan, dan lokasi tugas.'],
+    checkIn: ['Mengunggah absen masuk', 'Mengirim selfie dan lokasi masuk.'],
+    checkOut: ['Mengunggah absen pulang', 'Mengirim selfie dan lokasi pulang.'],
+
+    submitWorkReport: ['Mengirim laporan kerja', 'Menyimpan kegiatan dan dokumentasi harian.'],
+    resubmitWorkReportRevision: ['Mengirim revisi laporan', 'Menyimpan pembaruan laporan revisi.'],
+    updateWorkReportRevision: ['Mengirim revisi laporan', 'Menyimpan pembaruan laporan revisi.'],
+    submitWorkReportRevision: ['Mengirim revisi laporan', 'Menyimpan pembaruan laporan revisi.'],
+
+    submitLeave: ['Mengirim pengajuan izin', 'Menyimpan data izin dan bukti pendukung.'],
+    updateLeaveStatus: ['Memvalidasi izin', 'Menyimpan keputusan approval izin.'],
+
+    adminUpdateWorkReportStatus: ['Memvalidasi laporan', 'Menyimpan status dan catatan admin.'],
+    validateWorkReport: ['Memvalidasi laporan', 'Menyimpan status dan catatan admin.'],
+    validateAttendanceRecord: ['Memvalidasi absensi', 'Menyimpan status validasi absensi.'],
+    adminUpdateAttendance: ['Memvalidasi absensi', 'Menyimpan status validasi absensi.'],
+
+    exportAttendancePdf: ['Menyiapkan PDF absensi', 'Membuat file rekap absensi.'],
+    exportWorkReportPdf: ['Menyiapkan PDF laporan', 'Membuat file rekap laporan kerja.'],
+    exportAttendanceCsv: ['Menyiapkan CSV absensi', 'Membuat file rekap absensi.'],
+    exportWorkReportCsv: ['Menyiapkan CSV laporan', 'Membuat file rekap laporan kerja.'],
+    exportAttendance: ['Menyiapkan export absensi', 'Membuat file rekap absensi.'],
+    exportReports: ['Menyiapkan export laporan', 'Membuat file rekap laporan kerja.'],
+
+    updateUserProfileDetails: ['Menyimpan profil', 'Memperbarui data profil pengguna.'],
+    updateProfilePhotoBase64: ['Mengunggah foto profil', 'Menyimpan foto profil baru.'],
+    changePassword: ['Mengubah password', 'Memperbarui kata sandi akun.'],
+    updateSystemSettings: ['Menyimpan pengaturan', 'Memperbarui konfigurasi aplikasi.']
+  };
+
+  function isReadAction(action){
+    return /^(get|load|check|fetch)/i.test(String(action || ''));
+  }
+
+  function getLabel(action, fallbackTitle, fallbackMessage){
+    if(fallbackTitle && !isReadTitle(fallbackTitle)){
+      return [
+        fallbackTitle,
+        fallbackMessage || 'Mohon tunggu sebentar.'
+      ];
+    }
+
+    if(ACTION_LABELS[action]){
+      return ACTION_LABELS[action];
+    }
+
+    var a = String(action || '').toLowerCase();
+
+    if(a.includes('attendance') || a.includes('absensi')){
+      return ['Memproses absensi', 'Menyinkronkan data kehadiran.'];
+    }
+
+    if(a.includes('report') || a.includes('laporan') || a.includes('work')){
+      return ['Memproses laporan', 'Menyinkronkan data laporan kerja.'];
+    }
+
+    if(a.includes('revision') || a.includes('revisi')){
+      return ['Memproses revisi', 'Menyinkronkan pembaruan revisi laporan.'];
+    }
+
+    if(a.includes('leave') || a.includes('izin')){
+      return ['Memproses izin', 'Menyinkronkan data pengajuan izin.'];
+    }
+
+    if(a.includes('export') || a.includes('pdf') || a.includes('csv')){
+      return ['Menyiapkan file export', 'Membuat file rekap data.'];
+    }
+
+    if(a.includes('profile')){
+      return ['Menyimpan profil', 'Memperbarui data profil pengguna.'];
+    }
+
+    if(a.includes('login')){
+      return ['Memverifikasi akun', 'Mengecek data login.'];
+    }
+
+    if(isReadAction(action)){
+      return ['Memuat data aplikasi', 'Mengambil data terbaru dari server.'];
+    }
+
+    return ['Memproses data aplikasi', 'Menghubungkan aplikasi dengan backend.'];
+  }
+
+  function isReadTitle(title){
+    return /^(Memuat|Mengambil|Mengecek|Memeriksa)/i.test(String(title || ''));
+  }
+
+  function by(id){
+    return document.getElementById(id);
+  }
+
+  function setText(id, value){
+    var el = by(id);
+    if(el) el.textContent = value == null ? '' : String(value);
+  }
+
+  function removeTopPopup(){
+    [
+      '.it17-mini',
+      '.it16-mini',
+      '.it15-mini',
+      '.itn14-mini',
+      '.itv11-mini',
+      '#it17Mini',
+      '#it16Mini',
+      '#it15Mini',
+      '#itn14Mini',
+      '#itv11Mini'
+    ].forEach(function(selector){
+      document.querySelectorAll(selector).forEach(function(el){
+        try {
+          el.classList.remove('show');
+          el.style.display = 'none';
+          el.style.opacity = '0';
+          el.style.visibility = 'hidden';
+          el.style.pointerEvents = 'none';
+        } catch(e) {}
+      });
+    });
+  }
+
+  function ensureOverlay(){
+    var existing = by('itn19Overlay');
+
+    if(existing) return existing;
+
+    var overlay = document.createElement('div');
+    overlay.id = 'itn19Overlay';
+
+    overlay.innerHTML =
+      '<div class="itn19-card" role="status" aria-live="polite">' +
+        '<div class="itn19-head">' +
+          '<div class="itn19-logo"></div>' +
+          '<div>' +
+            '<div class="itn19-kicker">iTrack Native Process</div>' +
+            '<h3 class="itn19-title" id="itn19Title">Memproses data</h3>' +
+            '<p class="itn19-message" id="itn19Message">Mohon tunggu sebentar.</p>' +
+          '</div>' +
+        '</div>' +
+
+        '<div class="itn19-progress-row">' +
+          '<div class="itn19-percent"><span id="itn19Percent">0</span>%</div>' +
+          '<div class="itn19-stage">' +
+            '<b id="itn19StageTitle">Menyiapkan proses</b>' +
+            '<span id="itn19StageMessage">Membuka koneksi aman.</span>' +
+          '</div>' +
+          '<div class="itn19-dot"></div>' +
+        '</div>' +
+
+        '<div class="itn19-track">' +
+          '<div class="itn19-bar" id="itn19Bar"></div>' +
+        '</div>' +
+
+        '<div class="itn19-info">' +
+          '<div class="itn19-chip">' +
+            '<small>Proses</small>' +
+            '<span id="itn19Process">Aplikasi</span>' +
+          '</div>' +
+          '<div class="itn19-chip">' +
+            '<small>Status</small>' +
+            '<span id="itn19Status">Berjalan</span>' +
+          '</div>' +
+        '</div>' +
+
+        '<div class="itn19-foot">' +
+          '<span>Jangan tutup aplikasi saat proses berlangsung.</span>' +
+          '<strong id="itn19Time">0.0s</strong>' +
+        '</div>' +
+      '</div>';
+
+    document.body.appendChild(overlay);
+
+    return overlay;
+  }
+
+  function render(){
+    state.percent += (state.target - state.percent) * 0.25;
+
+    if(Math.abs(state.target - state.percent) < 0.5){
+      state.percent = state.target;
+    }
+
+    var percent = Math.round(Math.max(0, Math.min(100, state.percent)));
+
+    setText('itn19Percent', percent);
+
+    var bar = by('itn19Bar');
+    if(bar) bar.style.width = percent + '%';
+
+    setText('itn19Time', ((Date.now() - state.started) / 1000).toFixed(1) + 's');
+  }
+
+  function setStage(stage, message){
+    setText('itn19StageTitle', stage || 'Memproses data');
+    setText('itn19StageMessage', message || 'Mohon tunggu sebentar.');
+  }
+
+  function loop(){
+    clearInterval(state.timer);
+
+    state.timer = setInterval(function(){
+      if(!state.visible) return;
+
+      var elapsed = Date.now() - state.started;
+
+      if(state.target < 92){
+        state.target = Math.min(
+          92,
+          state.target + (elapsed > 900 ? 0.85 : 0.35)
+        );
+      }
+
+      if(elapsed > 700 && state.target < 28){
+        update(28, 'Validasi data', 'Memeriksa kelengkapan input.');
+      }
+
+      if(elapsed > 1400 && state.target < 50){
+        update(50, 'Mengirim ke backend', 'Menyinkronkan data ke server.');
+      }
+
+      if(elapsed > 2600 && state.target < 74){
+        update(74, 'Diproses backend', 'Menunggu proses backend selesai.');
+      }
+
+      if(elapsed > 5200 && state.target < 88){
+        update(88, 'Menyelesaikan proses', 'Menyiapkan pembaruan tampilan.');
+      }
+
+      render();
+    }, 120);
+  }
+
+  function begin(title, message, options){
+    options = options || {};
+
+    removeTopPopup();
+
+    clearTimeout(state.hideTimer);
+    clearTimeout(state.autoHideTimer);
+
+    var overlay = ensureOverlay();
+
+    state.visible = true;
+    state.activeCount++;
+    state.percent = 0;
+    state.target = Number(options.start || 12);
+    state.started = Date.now();
+
+    setText('itn19Title', title || 'Memproses data');
+    setText('itn19Message', message || 'Mohon tunggu sebentar.');
+    setText('itn19Process', title || 'Aplikasi');
+    setText('itn19Status', 'Berjalan');
+    setStage('Menyiapkan proses', 'Membuka koneksi aman.');
+
+    overlay.classList.add('show');
+
+    render();
+    loop();
+
+    state.autoHideTimer = setTimeout(function(){
+      if(state.visible){
+        complete('Selesai', 'Proses masih berjalan di latar belakang.');
+      }
+    }, Number(options.maxVisible || 60000));
+
+    return Date.now();
+  }
+
+  function update(percent, stage, message){
+    if(!state.visible){
+      return;
+    }
+
+    if(percent != null){
+      state.target = Math.max(state.target, Number(percent) || state.target);
+    }
+
+    if(stage || message){
+      setStage(stage, message);
+    }
+
+    render();
+  }
+
+  function complete(title, message){
+    if(!state.visible){
+      clear();
+      return;
+    }
+
+    clearInterval(state.timer);
+    clearTimeout(state.autoHideTimer);
+
+    state.target = 100;
+    state.percent = 100;
+
+    setText('itn19Title', title || 'Selesai');
+    setText('itn19Message', message || 'Data berhasil disinkronkan.');
+    setStage('Selesai', 'Proses berhasil diselesaikan.');
+    setText('itn19Status', 'Selesai');
+
+    render();
+
+    clearTimeout(state.hideTimer);
+    state.hideTimer = setTimeout(clear, 560);
+  }
+
+  function fail(title, message){
+    if(!state.visible){
+      clear();
+      return;
+    }
+
+    clearInterval(state.timer);
+    clearTimeout(state.autoHideTimer);
+
+    state.target = Math.max(state.target, 96);
+
+    setText('itn19Title', title || 'Proses gagal');
+    setText('itn19Message', message || 'Terjadi kendala saat memproses data.');
+    setStage('Terjadi kendala', 'Silakan coba lagi atau cek koneksi.');
+    setText('itn19Status', 'Gagal');
+
+    render();
+
+    clearTimeout(state.hideTimer);
+    state.hideTimer = setTimeout(clear, 1100);
+  }
+
+  function clear(){
+    clearInterval(state.timer);
+    clearTimeout(state.hideTimer);
+    clearTimeout(state.autoHideTimer);
+
+    state.visible = false;
+    state.activeCount = 0;
+
+    var overlay = by('itn19Overlay');
+    if(overlay){
+      overlay.classList.remove('show');
+    }
+
+    removeTopPopup();
+  }
+
+  var oldShowLoading = window.showLoading;
+  var oldHideLoading = window.hideLoading;
+
+  window.showLoading = function(title, message){
+    var label = getLabel('', title, message);
+    return begin(label[0], label[1], { start: 12 });
+  };
+
+  window.hideLoading = function(){
+    complete('Selesai', 'Data berhasil disinkronkan.');
+  };
+
+  window.iTrackNativeLoading = {
+    begin: function(title, message){
+      var label = getLabel('', title, message);
+      return begin(label[0], label[1], { start: 12 });
+    },
+    update: function(percent, stage, title, message){
+      update(percent, title || stage, message);
+    },
+    end: function(){
+      complete('Selesai', 'Data berhasil disinkronkan.');
+    },
+    complete: complete,
+    fail: fail,
+    clear: clear
+  };
+
+  window.iTrackNativeProgress = window.iTrackNativeLoading;
+  window.iTrackForceHideLoading = clear;
+
+  function wrapApiFunction(name){
+    if(typeof window[name] !== 'function') return false;
+    if(window[name].__itn19Wrapped) return true;
+
+    var base = window[name];
+
+    var wrapped = async function(action, payload){
+      var originalAction = action;
+      var read = isReadAction(originalAction);
+      var label = getLabel(originalAction);
+
+      /*
+        Read action tetap ada loading, tetapi elegan dan tidak popup atas.
+        Delay kecil supaya proses cepat tidak flicker.
+      */
+      var delayTimer = null;
+      var started = false;
+
+      function startLoader(){
+        if(started) return;
+        started = true;
+        begin(label[0], label[1], {
+          start: read ? 8 : 12,
+          maxVisible: read ? 20000 : 60000
+        });
+      }
+
+      delayTimer = setTimeout(startLoader, read ? 380 : 0);
+
+      try {
+        var result = await base.call(this, action, payload);
+
+        clearTimeout(delayTimer);
+
+        if(started){
+          update(94, 'Sinkronisasi UI', 'Memperbarui tampilan aplikasi.');
+          complete('Selesai', 'Data berhasil disinkronkan.');
+        }
+
+        return result;
+
+      } catch(error) {
+        clearTimeout(delayTimer);
+
+        if(started){
+          fail(
+            'Proses gagal',
+            error && error.message ? error.message : 'Terjadi kesalahan.'
+          );
+        }
+
+        throw error;
+      }
+    };
+
+    wrapped.__itn19Wrapped = true;
+    window[name] = wrapped;
+
+    return true;
+  }
+
+  /*
+    Bungkus api/callApi berkali-kali beberapa detik pertama,
+    karena beberapa script lama membuat ulang function api setelah DOM siap.
+  */
+  function bootWrap(){
+    removeTopPopup();
+
+    try {
+      window.API_URL = API_BARU;
+    } catch(e) {}
+
+    wrapApiFunction('api');
+    wrapApiFunction('callApi');
+  }
+
+  /*
+    Loading saat refresh / awal buka aplikasi.
+    Durasi pendek supaya terasa native, tidak mengganggu.
+  */
+  function initialBootLoading(){
+    begin('Menyiapkan aplikasi', 'Memuat tampilan dan konfigurasi iTrack.', {
+      start: 10,
+      maxVisible: 5000
+    });
+
+    setTimeout(function(){
+      update(64, 'Memuat komponen', 'Menyiapkan dashboard dan data lokal.');
+    }, 450);
+
+    setTimeout(function(){
+      complete('Siap digunakan', 'Aplikasi berhasil dimuat.');
+    }, 1050);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){
+      initialBootLoading();
+      bootWrap();
+    });
+  }else{
+    initialBootLoading();
+    bootWrap();
+  }
+
+  var tries = 0;
+  var wrapTimer = setInterval(function(){
+    tries++;
+    bootWrap();
+
+    if(tries >= 40){
+      clearInterval(wrapTimer);
+    }
+  }, 250);
+
+  setInterval(removeTopPopup, 800);
+
+  /*
+    Optional: jika ada fetch langsung ke Apps Script tanpa lewat api/callApi,
+    loading tetap muncul dan teks disesuaikan dari body.action.
+  */
+  if(!window.fetch.__itn19Wrapped){
+    var nativeFetch = window.fetch;
+
+    window.fetch = async function(input, init){
+      var url = '';
+
+      try {
+        url = typeof input === 'string' ? input : input.url;
+      } catch(e) {}
+
+      var isBackend = String(url || '').indexOf('script.google.com/macros/s/') >= 0;
+
+      if(!isBackend){
+        return nativeFetch.apply(this, arguments);
+      }
+
+      var action = '';
+      try {
+        if(init && init.body && typeof init.body === 'string'){
+          var parsed = JSON.parse(init.body);
+          action = parsed.action || '';
+        }
+      } catch(e) {}
+
+      var read = isReadAction(action);
+      var label = getLabel(action);
+
+      var delayTimer = null;
+      var started = false;
+
+      function startLoader(){
+        if(started) return;
+        started = true;
+
+        begin(label[0], label[1], {
+          start: read ? 8 : 12,
+          maxVisible: read ? 20000 : 60000
+        });
+      }
+
+      delayTimer = setTimeout(startLoader, read ? 380 : 0);
+
+      try {
+        var response = await nativeFetch.apply(this, arguments);
+
+        clearTimeout(delayTimer);
+
+        if(started){
+          update(94, 'Sinkronisasi UI', 'Memperbarui tampilan aplikasi.');
+          complete('Selesai', 'Data berhasil disinkronkan.');
+        }
+
+        return response;
+
+      } catch(error) {
+        clearTimeout(delayTimer);
+
+        if(started){
+          fail(
+            'Proses gagal',
+            error && error.message ? error.message : 'Terjadi kesalahan.'
+          );
+        }
+
+        throw error;
+      }
+    };
+
+    window.fetch.__itn19Wrapped = true;
+  }
+
+  /*
+    Fungsi untuk mengubah label dari console kalau Mas mau custom.
+    Contoh:
+    iTrackSetLoadingLabel('submitAttendanceIn', 'Upload Absen Masuk', 'Mengirim selfie dan lokasi.')
+  */
+  window.iTrackSetLoadingLabel = function(action, title, message){
+    ACTION_LABELS[action] = [
+      title || 'Memproses data',
+      message || 'Mohon tunggu sebentar.'
+    ];
+  };
+
+  console.warn('[iTrack] Native Loading V19 aktif: simple elegant, progress bar, teks kontekstual.');
+})();
+</script>
+  <!-- PATCH NATIVE LOADING V20 - FIX STUCK, READ TANPA FULLSCREEN, WRITE TETAP NATIVE -->
+<script id="itrack-native-loading-v20-fix-stuck">
+(function(){
+  'use strict';
+
+  var API_BARU = 'https://script.google.com/macros/s/AKfycbxJQ-MUX4HCH2Px3zWeC7a1mJ1MTJ03o_CWoPF160kfIatq8y3SiHtzBDlTvj8DpcXJUA/exec';
+
+  try {
+    window.API_URL = API_BARU;
+  } catch(e) {}
+
+  function isReadAction(action){
+    return /^(get|load|check|fetch)/i.test(String(action || ''));
+  }
+
+  function isReadTitle(title){
+    return /^(Memuat|Mengambil|Mengecek|Memeriksa|Memproses laporan|Memproses absensi|Memproses izin)/i.test(String(title || ''));
+  }
+
+  function isWriteAction(action){
+    var a = String(action || '').toLowerCase();
+
+    return (
+      a.includes('submit') ||
+      a.includes('upload') ||
+      a.includes('export') ||
+      a.includes('validate') ||
+      a.includes('update') ||
+      a.includes('approve') ||
+      a.includes('reject') ||
+      a.includes('revision') ||
+      a.includes('revisi') ||
+      a.includes('login') ||
+      a.includes('password') ||
+      a.includes('settings')
+    );
+  }
+
+  function hideNativeLoading(){
+    [
+      'itn19Overlay',
+      'it18Full',
+      'it17Full',
+      'it16Full',
+      'it15Full',
+      'itn14Full',
+      'loading'
+    ].forEach(function(id){
+      var el = document.getElementById(id);
+
+      if(el){
+        try {
+          el.classList.remove('show');
+          el.style.display = 'none';
+        } catch(e) {}
+      }
+    });
+
+    [
+      '.it17-mini',
+      '.it16-mini',
+      '.it15-mini',
+      '.itn14-mini',
+      '.itv11-mini',
+      '#it17Mini',
+      '#it16Mini',
+      '#it15Mini',
+      '#itn14Mini',
+      '#itv11Mini'
+    ].forEach(function(selector){
+      document.querySelectorAll(selector).forEach(function(el){
+        try {
+          el.classList.remove('show');
+          el.style.display = 'none';
+          el.style.opacity = '0';
+          el.style.visibility = 'hidden';
+        } catch(e) {}
+      });
+    });
+  }
+
+  function getWriteLabel(action){
+    var a = String(action || '').toLowerCase();
+
+    if(a.includes('attendance') || a.includes('absensi')){
+      if(a.includes('out') || a.includes('pulang')){
+        return ['Mengunggah absen pulang', 'Mengirim selfie, GPS, dan waktu pulang.'];
+      }
+
+      if(a.includes('outside') || a.includes('luar')){
+        return ['Mengunggah absensi luar lokasi', 'Mengirim bukti, alasan, dan lokasi tugas.'];
+      }
+
+      return ['Mengunggah absen masuk', 'Mengirim selfie, GPS, dan waktu masuk.'];
+    }
+
+    if(a.includes('report') || a.includes('laporan') || a.includes('work')){
+      if(a.includes('revision') || a.includes('revisi')){
+        return ['Mengirim revisi laporan', 'Menyimpan pembaruan revisi laporan.'];
+      }
+
+      return ['Mengirim laporan kerja', 'Menyimpan kegiatan dan dokumentasi harian.'];
+    }
+
+    if(a.includes('leave') || a.includes('izin')){
+      return ['Mengirim pengajuan izin', 'Menyimpan data izin dan bukti pendukung.'];
+    }
+
+    if(a.includes('export') || a.includes('pdf') || a.includes('csv')){
+      return ['Menyiapkan file export', 'Membuat file rekap data.'];
+    }
+
+    if(a.includes('validate') || a.includes('approve') || a.includes('reject')){
+      return ['Memvalidasi data', 'Menyimpan keputusan validasi admin.'];
+    }
+
+    if(a.includes('profile')){
+      return ['Menyimpan profil', 'Memperbarui data profil pengguna.'];
+    }
+
+    if(a.includes('password')){
+      return ['Mengubah password', 'Memperbarui kata sandi akun.'];
+    }
+
+    if(a.includes('settings')){
+      return ['Menyimpan pengaturan', 'Memperbarui konfigurasi aplikasi.'];
+    }
+
+    if(a.includes('login')){
+      return ['Memverifikasi akun', 'Mengecek username dan kata sandi.'];
+    }
+
+    return ['Memproses data', 'Menyinkronkan data ke backend.'];
+  }
+
+  function showWriteLoading(action){
+    var label = getWriteLabel(action);
+
+    if(window.iTrackNativeLoading && typeof window.iTrackNativeLoading.begin === 'function'){
+      try {
+        return window.iTrackNativeLoading.begin(label[0], label[1]);
+      } catch(e) {}
+    }
+
+    if(typeof window.showLoading === 'function'){
+      try {
+        return window.showLoading(label[0], label[1]);
+      } catch(e) {}
+    }
+
+    return Date.now();
+  }
+
+  function finishWriteLoading(){
+    if(window.iTrackNativeLoading && typeof window.iTrackNativeLoading.complete === 'function'){
+      try {
+        return window.iTrackNativeLoading.complete('Selesai', 'Data berhasil disinkronkan.');
+      } catch(e) {}
+    }
+
+    if(typeof window.hideLoading === 'function'){
+      try {
+        return window.hideLoading();
+      } catch(e) {}
+    }
+
+    hideNativeLoading();
+  }
+
+  /*
+    Override showLoading:
+    - Judul baca data tidak tampil fullscreen.
+    - Judul submit/write tetap tampil native.
+  */
+  var oldShowLoading = window.showLoading;
+  var oldHideLoading = window.hideLoading;
+
+  window.showLoading = function(title, message){
+    if(isReadTitle(title)){
+      hideNativeLoading();
+      return null;
+    }
+
+    if(typeof oldShowLoading === 'function'){
+      return oldShowLoading(title, message);
+    }
+
+    return Date.now();
+  };
+
+  window.hideLoading = function(){
+    hideNativeLoading();
+
+    if(typeof oldHideLoading === 'function'){
+      try {
+        return oldHideLoading();
+      } catch(e) {}
+    }
+  };
+
+  /*
+    Override API:
+    - GET/read action tidak fullscreen loading.
+    - Write action fullscreen native.
+    - Endpoint backend dipastikan API baru.
+  */
+  var baseApi = window.api;
+
+  async function cleanApi(action, payload){
+    var read = isReadAction(action);
+    var write = isWriteAction(action);
+
+    if(read){
+      hideNativeLoading();
+    }
+
+    if(write && !read){
+      showWriteLoading(action);
+    }
+
+    try {
+      var result;
+
+      if(typeof baseApi === 'function' && baseApi !== cleanApi){
+        result = await baseApi.call(this, action, payload);
+      } else {
+        var response = await fetch(API_BARU, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(Object.assign({}, payload || {}, {
+            action: action,
+            payload: payload || {}
+          }))
+        });
+
+        var text = await response.text();
+
+        try {
+          result = JSON.parse(text);
+        } catch(e) {
+          result = {
+            success: false,
+            message: 'Response backend bukan JSON valid.',
+            raw: text
+          };
+        }
+      }
+
+      if(write && !read){
+        finishWriteLoading();
+      }
+
+      if(read){
+        hideNativeLoading();
+      }
+
+      return result;
+
+    } catch(error) {
+      hideNativeLoading();
+      throw error;
+    }
+  }
+
+  cleanApi.__v20CleanApi = true;
+
+  window.api = cleanApi;
+  window.callApi = cleanApi;
+
+  /*
+    Kalau sekarang loader sedang nyangkut, tutup otomatis.
+  */
+  hideNativeLoading();
+
+  setTimeout(hideNativeLoading, 300);
+  setTimeout(hideNativeLoading, 1000);
+  setTimeout(hideNativeLoading, 2500);
+
+  window.iTrackForceHideLoading = hideNativeLoading;
+
+  console.warn('[iTrack] Native Loading V20 aktif: read tanpa fullscreen, write tetap native, anti-stuck.');
 })();
 </script>
 
